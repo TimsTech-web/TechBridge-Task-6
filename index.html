@@ -15,6 +15,215 @@
 </head>
 <body>
 
+  
+<!-- ================= LOGIN MODAL ================= -->
+<div class="login-overlay" id="loginOverlay" hidden>
+  <div class="login-modal">
+    <button class="login-close" id="loginClose" type="button" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="login-header">
+      <div class="login-logo">TB</div>
+      <h2>Intern Login</h2>
+      <p>Access your TechBridge dashboard</p>
+    </div>
+    <form id="loginFormModal" class="login-form">
+      <div class="login-field">
+        <label for="modalName"><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" id="modalName" placeholder="Enter your full name" required>
+      </div>
+      <div class="login-field">
+        <label for="modalProgram"><i class="fas fa-graduation-cap"></i> Program</label>
+        <select id="modalProgram" required>
+          <option value="">Select your program</option>
+          <option value="data-analytics">Data Analytics</option>
+          <option value="web-development">Web Development</option>
+        </select>
+      </div>
+      <div class="login-field">
+        <label for="modalId"><i class="fas fa-id-card"></i> Student ID</label>
+        <input type="text" id="modalId" placeholder="e.g., TB-2026-001" required>
+      </div>
+      <button type="submit" class="btn-login-modal">
+        <i class="fas fa-sign-in-alt"></i> Access Dashboard
+      </button>
+    </form>
+    <p class="login-note">Don't have an account? <a href="#apply" data-page="apply" onclick="closeLoginModal()">Apply Now</a></p>
+  </div>
+</div>
+
+<style>
+/* ============ Login Modal Styles ============ */
+.login-overlay {
+  position: fixed; inset: 0; z-index: 99999; padding: 3vh 14px; overflow-y: auto;
+  background: rgba(5, 14, 30, .75); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  animation: loginFade .25s ease;
+}
+@keyframes loginFade { from { opacity: 0; } to { opacity: 1; } }
+
+.login-modal {
+  position: relative; width: 100%; max-width: 420px; border-radius: 24px;
+  background: white; box-shadow: 0 30px 80px rgba(0,0,0,.4);
+  padding: 36px 32px 28px; animation: loginRise .35s cubic-bezier(.2,.9,.3,1.15);
+}
+@keyframes loginRise { from { opacity: 0; transform: translateY(24px) scale(.96); } to { opacity: 1; transform: none; } }
+
+.login-close {
+  position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid #e2e8f0; background: #f8fafc; color: #64748b; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: all .2s;
+}
+.login-close:hover { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
+
+.login-header { text-align: center; margin-bottom: 28px; }
+.login-logo {
+  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 18px;
+  background: linear-gradient(135deg, #0b1f3f, #134b7c); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1.6rem;
+}
+.login-header h2 { margin: 0 0 6px; font-size: 1.4rem; color: #0b1f3f; }
+.login-header p { margin: 0; color: #64748b; font-size: .88rem; }
+
+.login-form { display: flex; flex-direction: column; gap: 18px; }
+.login-field { display: flex; flex-direction: column; gap: 6px; }
+.login-field label {
+  font-size: .82rem; font-weight: 700; color: #334155;
+  display: flex; align-items: center; gap: 6px;
+}
+.login-field label i { color: #0ea5e9; width: 16px; }
+.login-field input, .login-field select {
+  padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 12px;
+  font-size: .92rem; transition: all .2s; background: #f8fafc; width: 100%;
+}
+.login-field input:focus, .login-field select:focus {
+  outline: none; border-color: #0ea5e9; background: white;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.1);
+}
+
+.btn-login-modal {
+  margin-top: 8px; padding: 14px; border: none; border-radius: 12px;
+  background: linear-gradient(135deg, #0b1f3f, #134b7c); color: white;
+  font-size: .95rem; font-weight: 700; cursor: pointer; transition: all .2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-login-modal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11,31,63,.3);
+}
+
+.login-note { text-align: center; margin-top: 20px; font-size: .82rem; color: #64748b; }
+.login-note a { color: #0ea5e9; font-weight: 700; text-decoration: none; }
+.login-note a:hover { text-decoration: underline; }
+
+/* Login button in navbar */
+.btn-login-nav {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border-radius: 999px; font-size: .85rem; font-weight: 700;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.btn-login-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(14,165,233,.35); }
+</style>
+
+<script>
+// ============ Login Modal Functions ============
+function openLoginModal() {
+  document.getElementById('loginOverlay').hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+function closeLoginModal() {
+  document.getElementById('loginOverlay').hidden = true;
+  document.body.style.overflow = '';
+}
+
+document.getElementById('loginClose').addEventListener('click', closeLoginModal);
+document.getElementById('loginOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeLoginModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && !document.getElementById('loginOverlay').hidden) closeLoginModal();
+});
+
+// Handle login form submission
+document.getElementById('loginFormModal').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('modalName').value.trim();
+  const program = document.getElementById('modalProgram').value;
+  const studentId = document.getElementById('modalId').value.trim();
+  
+  if (!name || !program || !studentId) {
+    alert('Please fill in all fields');
+    return;
+  }
+  
+  // Save user session
+  const user = { name, program, studentId };
+  localStorage.setItem('techbridge_user', JSON.stringify(user));
+  
+  // Redirect to dashboard
+  window.location.href = 'intern-dashboard.html';
+});
+
+// Check if user is already logged in
+window.addEventListener('load', function() {
+  const savedUser = localStorage.getItem('techbridge_user');
+  if (savedUser) {
+    // Update login button to show dashboard link
+    const loginBtns = document.querySelectorAll('[data-login-btn]');
+    loginBtns.forEach(btn => {
+      btn.innerHTML = '<i class="fas fa-tachometer-alt"></i> Dashboard';
+      btn.onclick = function() { window.location.href = 'intern-dashboard.html'; };
+    });
+  }
+});
+</script>
+'''
+
+# Find the position to inject the login modal (before the closing </body> tag)
+# Also need to add the login button to the navbar
+
+# First, add the login button to the navbar (after the Apply Now button)
+navbar_pattern = '''<a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
+    </nav>'''
+
+navbar_replacement = '''<a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
+      <button class="btn-login-nav" data-login-btn onclick="openLoginModal()" type="button">
+        <i class="fas fa-user-circle"></i> Intern Login
+      </button>
+    </nav>'''
+
+modified_html = original_html.replace(navbar_pattern, navbar_replacement)
+
+# Also add a login button to the hero section (after the Explore Programmes button)
+hero_pattern = '''<a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
+        </div>'''
+
+hero_replacement = '''<a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
+          <button class="btn-ghost" onclick="openLoginModal()" type="button" style="border-color: rgba(255,255,255,0.3); color: white; margin-left: 12px;">
+            <i class="fas fa-sign-in-alt"></i> Intern Login
+          </button>
+        </div>'''
+
+modified_html = modified_html.replace(hero_pattern, hero_replacement)
+
+# Inject the login modal before the closing </body> tag
+modified_html = modified_html.replace('</body>', login_modal + '\n</body>')
+
+# Write the modified index.html
+with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
+    f.write(modified_html)
+
+print("Modified index.html created successfully!")
+print(f"File size: {len(modified_html)} characters")
+print("Changes made:")
+print("1. Added login button to navbar")
+print("2. Added login button to hero section")
+print("3. Added login modal with form")
+print("4. Added JavaScript for login functionality")
+
 <!-- ================= NAVBAR ================= -->
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
