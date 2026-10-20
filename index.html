@@ -180,49 +180,21 @@ window.addEventListener('load', function() {
   }
 });
 </script>
-'''
-
-# Find the position to inject the login modal (before the closing </body> tag)
-# Also need to add the login button to the navbar
-
-# First, add the login button to the navbar (after the Apply Now button)
-navbar_pattern = '''<a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
-    </nav>'''
-
-navbar_replacement = '''<a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
+ </body> 
+  
+  
+<a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
       <button class="btn-login-nav" data-login-btn onclick="openLoginModal()" type="button">
         <i class="fas fa-user-circle"></i> Intern Login
       </button>
     </nav>'''
 
-modified_html = original_html.replace(navbar_pattern, navbar_replacement)
-
-# Also add a login button to the hero section (after the Explore Programmes button)
-hero_pattern = '''<a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
-        </div>'''
-
-hero_replacement = '''<a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
+'<a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
           <button class="btn-ghost" onclick="openLoginModal()" type="button" style="border-color: rgba(255,255,255,0.3); color: white; margin-left: 12px;">
             <i class="fas fa-sign-in-alt"></i> Intern Login
           </button>
         </div>'''
 
-modified_html = modified_html.replace(hero_pattern, hero_replacement)
-
-# Inject the login modal before the closing </body> tag
-modified_html = modified_html.replace('</body>', login_modal + '\n</body>')
-
-# Write the modified index.html
-with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
-    f.write(modified_html)
-
-print("Modified index.html created successfully!")
-print(f"File size: {len(modified_html)} characters")
-print("Changes made:")
-print("1. Added login button to navbar")
-print("2. Added login button to hero section")
-print("3. Added login modal with form")
-print("4. Added JavaScript for login functionality")
 
 <!-- ================= NAVBAR ================= -->
 <header class="navbar" id="navbar">
