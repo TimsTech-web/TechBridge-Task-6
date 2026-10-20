@@ -1,6 +1,4 @@
-
-# Create the intern dashboard HTML file
-dashboard_html = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1508,11 +1506,4 @@ window.addEventListener('load', function() {
 
 </body>
 </html>
-'''
 
-# Write the dashboard file
-with open('/mnt/agents/output/intern-dashboard.html', 'w', encoding='utf-8') as f:
-    f.write(dashboard_html)
-
-print("Dashboard file created successfully!")
-print(f"File size: {len(dashboard_html)} characters")
