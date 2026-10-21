@@ -332,6 +332,7 @@ body {
 }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -582,7 +583,7 @@ body {
 
   $('logoutBtn').addEventListener('click', function () {
     localStorage.removeItem(PROFILE_KEY);
-    location.reload();
+    window.location.href = 'index.html#home';
   });
 
   /* ================= DASHBOARD RENDER ================= */
