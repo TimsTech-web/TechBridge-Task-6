@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TechBridge Services — 30DAYS INTERNSHIP TRAINING</title>
-<link rel="icon" type="image/png" href="logo.png">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="logo.png">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <base target="_blank">
 </head>
 <body>
@@ -13,7 +14,7 @@
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
     <a href="#home" class="brand" data-page="home">
-      <img src="logo.png" alt="TechBridge logo" class="brand-logo">
+      <img src="logo.png" alt="TechBridge logo" class="brand-logo" onerror="this.style.display='none'">
     </a>
 
     <nav class="nav-links" id="navLinks">
@@ -36,6 +37,7 @@
       </div>
 
       <a href="#admission" class="nav-link" data-page="admission">Admission</a>
+      <a href="#login" class="nav-link" id="tbLoginNav">Intern Login</a>
       <a href="#apply" class="btn-apply" data-page="apply">Apply Now</a>
     </nav>
 
@@ -44,13 +46,11 @@
     </button>
   </div>
 
-
-
   <!-- News headline ticker (always visible in navbar, on every page) -->
   <div class="nav-news" aria-label="Latest news">
     <div class="nav-news-track" id="navNewsTrack">
       <span class="nav-news-item"><span class="tb2-live-dot"></span> October 2026 Cohort is <strong>LIVE</strong> — <em>Day 10 of 30</em> ongoing</span>
-      <span class="nav-news-item"><span class="tb2-live-dot"></span> Trainees are currently on <em>Task 5 of 8</em> — task-by-task breakdown in Cohort Details</span>
+      <span class="nav-news-item"><span class="tb2-live-dot"></span> Trainees are currently on <em>Task 3 of 8</em> — task-by-task breakdown in Cohort Details</span>
       <span class="nav-news-item"><span class="tb2-live-dot"></span> Applications for the <strong> October 2026/2027</strong> cohort is closed</span>
     </div>
   </div>
@@ -60,16 +60,6 @@
 
 <!-- ================= HOME ================= -->
 <section class="page active" id="page-home">
-
-  <!-- ================= CHALLENGE HUB FLOATING BUTTON ================= -->
-  <button class="ch-fab" id="chFab" type="button" aria-label="Open Challenge Hub">
-    <span class="ch-fab-ring" aria-hidden="true"></span>
-    <span class="ch-fab-icon" aria-hidden="true">
-      <img src="challenge-hub-live.png" alt="" class="ch-fab-img">
-    </span>
-    <span class="ch-fab-text">Challenge Hub</span>
-  </button>
-
   <div class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
@@ -90,205 +80,55 @@
   </div>
 
 
-<div class="container features">
+  <!-- ================= COHORT NEWS BANNER ================= -->
+  <div class="tb2-news-wrap">
+    <div class="container">
+      <div class="tb2-news">
+        <div class="tb2-news-shine" aria-hidden="true"></div>
+        <div class="tb2-news-left">
+          <span class="tb2-live-ring"><span class="tb2-live-dot"></span></span>
+          <div class="tb2-news-copy">
+            <span class="tb2-news-kicker">Live Cohort Update</span>
+            <h3 class="tb2-news-title">October 2026 Cohort is <span class="tb2-title-accent">LIVE</span> — Day 10 of 30 ongoing</h3>
+            <p class="tb2-news-sub">Trainees are currently on Task 3 of 8 · Full task-by-task breakdown inside</p>
+          </div>
+        </div>
+        <div class="tb2-news-right">
+          <div class="tb2-day-pill"><strong>DAY 10</strong><em>of 30</em></div>
+          <button class="tb2-news-btn" id="tb-open-details" type="button">
+            <span>View Details</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container features">
     <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-rocket.png" alt=""></div>
+      <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
       <h3>Hands-On Projects</h3>
       <p>Build a real portfolio with projects reviewed by industry mentors every week.</p>
     </div>
     <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-mentor.png" alt=""></div>
+      <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
       <h3>Expert Mentorship</h3>
       <p>Learn directly from senior developers and data analysts working in the industry.</p>
     </div>
     <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-growth.png" alt=""></div>
+      <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
       <h3>Career Support</h3>
       <p>CV clinics, mock interviews and direct referrals to hiring partner companies.</p>
     </div>
   </div>
 </section>
 
-  
-<!-- ================= LOGIN MODAL ================= -->
-<div class="login-overlay" id="loginOverlay" hidden>
-  <div class="login-modal">
-    <button class="login-close" id="loginClose" type="button" aria-label="Close">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <div class="login-header">
-      <div class="login-logo">TB</div>
-      <h2>Intern Login</h2>
-      <p>Access your TechBridge dashboard</p>
-    </div>
-    <form id="loginFormModal" class="login-form">
-      <div class="login-field">
-        <label for="modalName"><i class="fas fa-user"></i> Full Name</label>
-        <input type="text" id="modalName" placeholder="Enter your full name" required>
-      </div>
-      <div class="login-field">
-        <label for="modalProgram"><i class="fas fa-graduation-cap"></i> Program</label>
-        <select id="modalProgram" required>
-          <option value="">Select your program</option>
-          <option value="data-analytics">Data Analytics</option>
-          <option value="web-development">Web Development</option>
-        </select>
-      </div>
-      <div class="login-field">
-        <label for="modalId"><i class="fas fa-id-card"></i> Student ID</label>
-        <input type="text" id="modalId" placeholder="e.g., TB-2026-001" required>
-      </div>
-      <button type="submit" class="btn-login-modal">
-        <i class="fas fa-sign-in-alt"></i> Access Dashboard
-      </button>
-    </form>
-    <p class="login-note">Don't have an account? <a href="#apply" data-page="apply" onclick="closeLoginModal()">Apply Now</a></p>
-  </div>
-</div>
-
-<style>
-/* ============ Login Modal Styles ============ */
-.login-overlay {
-  position: fixed; inset: 0; z-index: 99999; padding: 3vh 14px; overflow-y: auto;
-  background: rgba(5, 14, 30, .75); backdrop-filter: blur(8px);
-  display: flex; align-items: center; justify-content: center;
-  animation: loginFade .25s ease;
-}
-@keyframes loginFade { from { opacity: 0; } to { opacity: 1; } }
-
-.login-modal {
-  position: relative; width: 100%; max-width: 420px; border-radius: 24px;
-  background: white; box-shadow: 0 30px 80px rgba(0,0,0,.4);
-  padding: 36px 32px 28px; animation: loginRise .35s cubic-bezier(.2,.9,.3,1.15);
-}
-@keyframes loginRise { from { opacity: 0; transform: translateY(24px) scale(.96); } to { opacity: 1; transform: none; } }
-
-.login-close {
-  position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%;
-  border: 1px solid #e2e8f0; background: #f8fafc; color: #64748b; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; transition: all .2s;
-}
-.login-close:hover { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
-
-.login-header { text-align: center; margin-bottom: 28px; }
-.login-logo {
-  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 18px;
-  background: linear-gradient(135deg, #0b1f3f, #134b7c); color: white;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 1.6rem;
-}
-.login-header h2 { margin: 0 0 6px; font-size: 1.4rem; color: #0b1f3f; }
-.login-header p { margin: 0; color: #64748b; font-size: .88rem; }
-
-.login-form { display: flex; flex-direction: column; gap: 18px; }
-.login-field { display: flex; flex-direction: column; gap: 6px; }
-.login-field label {
-  font-size: .82rem; font-weight: 700; color: #334155;
-  display: flex; align-items: center; gap: 6px;
-}
-.login-field label i { color: #0ea5e9; width: 16px; }
-.login-field input, .login-field select {
-  padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 12px;
-  font-size: .92rem; transition: all .2s; background: #f8fafc; width: 100%;
-}
-.login-field input:focus, .login-field select:focus {
-  outline: none; border-color: #0ea5e9; background: white;
-  box-shadow: 0 0 0 3px rgba(14,165,233,.1);
-}
-
-.btn-login-modal {
-  margin-top: 8px; padding: 14px; border: none; border-radius: 12px;
-  background: linear-gradient(135deg, #0b1f3f, #134b7c); color: white;
-  font-size: .95rem; font-weight: 700; cursor: pointer; transition: all .2s;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-}
-.btn-login-modal:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(11,31,63,.3);
-}
-
-.login-note { text-align: center; margin-top: 20px; font-size: .82rem; color: #64748b; }
-.login-note a { color: #0ea5e9; font-weight: 700; text-decoration: none; }
-.login-note a:hover { text-decoration: underline; }
-
-/* Login button in navbar */
-.btn-login-nav {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 8px 18px; border-radius: 999px; font-size: .85rem; font-weight: 700;
-  background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white;
-  border: none; cursor: pointer; transition: all .2s;
-}
-.btn-login-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(14,165,233,.35); }
-</style>
-
-<script>
-// ============ Login Modal Functions ============
-function openLoginModal() {
-  document.getElementById('loginOverlay').hidden = false;
-  document.body.style.overflow = 'hidden';
-}
-function closeLoginModal() {
-  document.getElementById('loginOverlay').hidden = true;
-  document.body.style.overflow = '';
-}
-
-document.getElementById('loginClose').addEventListener('click', closeLoginModal);
-document.getElementById('loginOverlay').addEventListener('click', function(e) {
-  if (e.target === this) closeLoginModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && !document.getElementById('loginOverlay').hidden) closeLoginModal();
-});
-
-// Handle login form submission
-document.getElementById('loginFormModal').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('modalName').value.trim();
-  const program = document.getElementById('modalProgram').value;
-  const studentId = document.getElementById('modalId').value.trim();
-  
-  if (!name || !program || !studentId) {
-    alert('Please fill in all fields');
-    return;
-  }
-  
-  // Save user session
-  const user = { name, program, studentId };
-  localStorage.setItem('techbridge_user', JSON.stringify(user));
-  
-  // Redirect to dashboard
-  window.location.href = 'intern-dashboard.html';
-});
-
-// Check if user is already logged in
-window.addEventListener('load', function() {
-  const savedUser = localStorage.getItem('techbridge_user');
-  if (savedUser) {
-    // Update login button to show dashboard link
-    const loginBtns = document.querySelectorAll('[data-login-btn]');
-    loginBtns.forEach(btn => {
-      btn.innerHTML = '<i class="fas fa-tachometer-alt"></i> Dashboard';
-      btn.onclick = function() { window.location.href = 'intern-dashboard.html'; };
-    });
-  }
-});
-</script>
-
-      <button class="btn-login-nav" data-login-btn onclick="openLoginModal()" type="button">
-        <i class="fas fa-user-circle"></i> Intern Login
-      </button>
-    </nav>
- 
-
-
-
 <!-- ================= ABOUT ================= -->
 <section class="page" id="page-about">
   <div class="container section-pad">
     <div class="about-grid">
       <div class="about-img">
-        <img src="hero-interns.png" alt="TechBridge training session">
+        <img src="hero-interns.png" alt="TechBridge training session" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
       <div>
         <span class="badge">About TechBridge</span>
@@ -324,7 +164,7 @@ window.addEventListener('load', function() {
       <div class="track-cards">
         <button class="track-card tc-da" type="button" data-track="data-analytics">
           <span class="tc-glow" aria-hidden="true"></span>
-          <span class="tc-icon tc-icon-da"><img src="rt-icon-data.png" alt=""></span>
+          <span class="tc-icon tc-icon-da"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="7" cy="15" r="1.4" fill="currentColor" stroke="none"/><circle cx="11" cy="10" r="1.4" fill="currentColor" stroke="none"/><circle cx="14" cy="13" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="6" r="1.4" fill="currentColor" stroke="none"/></svg></span>
           <span class="tc-tag">Track 01</span>
           <h3>Data Analytics</h3>
           <p class="tc-tagline">Turn raw numbers into business decisions — from spreadsheets to SQL, Python and Power BI dashboards.</p>
@@ -343,7 +183,7 @@ window.addEventListener('load', function() {
 
         <button class="track-card tc-wd" type="button" data-track="web-development">
           <span class="tc-glow" aria-hidden="true"></span>
-          <span class="tc-icon tc-icon-wd"><img src="rt-icon-code.png" alt=""></span>
+          <span class="tc-icon tc-icon-wd"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 9l-2.5 2.5L8 14M16 9l2.5 2.5L16 14M13 8.5l-2 7"/><path d="M8 21h8"/></svg></span>
           <span class="tc-tag">Track 02</span>
           <h3>Web Development</h3>
           <p class="tc-tagline">Go from your first HTML page to a complete internship platform — with interactivity, registration and dashboards.</p>
@@ -502,7 +342,7 @@ window.addEventListener('load', function() {
       <!-- Step 1: Download form -->
       <div class="apply-card">
         <div class="apply-step-tag">Step 1</div>
-        <div class="f-icon"><img src="rt-icon-download.png" alt=""></div>
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></div>
         <h3>Download Application Form</h3>
         <p>Get the official TechBridge application form (PDF). Fill in all sections clearly.</p>
         <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/closedform" download class="btn-primary btn-block">
@@ -524,7 +364,7 @@ window.addEventListener('load', function() {
       <!-- Step 3: Submit -->
       <div class="apply-card">
         <div class="apply-step-tag">Step 3</div>
-        <div class="f-icon"><img src="rt-icon-rocket.png" alt=""></div>
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
         <h3>Submit Your Application</h3>
         <p>Upload your completed application form below and confirm you have joined the WhatsApp community.</p>
         <form id="applyForm" class="apply-form">
@@ -561,7 +401,7 @@ window.addEventListener('load', function() {
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <span class="footer-logo-chip"><img src="logo.png" alt="TechBridge logo" class="footer-logo"></span>
+      <span class="footer-logo-chip"><img src="logo.png" alt="TechBridge logo" class="footer-logo" onerror="this.style.display='none'"></span>
       <p>Bridging the gap between talent and opportunity in tech.</p>
     </div>
     <div>
@@ -592,72 +432,682 @@ window.addEventListener('load', function() {
 </footer>
 
 
+<!-- ================= COHORT DETAILS MODAL ================= -->
+<div class="tb2-overlay" id="tbModal" hidden>
+  <div class="tb2-modal" role="dialog" aria-modal="true" aria-labelledby="tbModalTitle">
 
-<!-- ================= CHALLENGE HUB MODAL ================= -->
-<div class="ch-overlay" id="chModal" hidden>
-  <div class="ch-modal" role="dialog" aria-modal="true" aria-labelledby="chTitle">
-    <div class="ch-hero">
-      <div class="ch-hero-bg" aria-hidden="true"></div>
-      <button class="ch-close" id="chClose" type="button" aria-label="Close Challenge Hub">
+    <div class="tb2-hero">
+      <div class="tb2-hero-bg" aria-hidden="true"></div>
+      <button class="tb2-close" id="tbCloseModal" type="button" aria-label="Close">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
-      <div class="ch-hero-grid">
-        <div class="ch-hero-copy">
-          <span class="ch-live-chip"><span class="tb2-live-dot"></span> TECHBRIDGE · CHALLENGE HUB</span>
-          <h3 id="chTitle">TechBridge - Challenge Hub</h3>
-          <p>Test your skills with hands-on challenges matched to your track and level. Refresh for a new challenge, switch difficulty anytime, and check the details before you dive in.</p>
-        </div>
-        <div class="ch-hero-badge" aria-hidden="true">
-          <img src="challenge-hub-live.png" alt="Live real-time analytics" class="ch-live-photo">
-          <span class="ch-live-badge-dot"><span class="tb2-live-dot"></span></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="ch-body">
-      <!-- INTRO / CHOOSE TRACK -->
-      <div class="ch-intro" id="chIntro">
-        <div class="ch-intro-msg">
-          <h4>Welcome to the TechBridge Challenge Hub</h4>
-          <p>Pick a challenge from your track to sharpen the exact skills you are learning in the 30-day internship. Every challenge maps to a difficulty level — <strong>Beginner</strong>, <strong>Intermediate</strong> or <strong>Advanced</strong> — and each one comes with a clear brief, required skills and a deliverable you can add to your portfolio. Not feeling a challenge? Hit refresh for another one from the same level.</p>
-        </div>
-        <h4 class="ch-choose-label">Choose Your Track</h4>
-        <div class="ch-track-btns">
-          <button class="ch-track-btn ch-tb-da" type="button" data-chtrack="data-analytics">
-            <span class="ch-tb-icon"><img src="rt-icon-data.png" alt=""></span>
-            <span class="ch-tb-text"><strong>Data Analytics</strong><small>Spreadsheets · SQL · Python · Power BI</small></span>
-            <span class="ch-tb-arrow" aria-hidden="true">&rarr;</span>
-          </button>
-          <button class="ch-track-btn ch-tb-wd" type="button" data-chtrack="web-development">
-            <span class="ch-tb-icon"><img src="rt-icon-code.png" alt=""></span>
-            <span class="ch-tb-text"><strong>Web Development</strong><small>HTML5 · CSS3 · JavaScript · Platforms</small></span>
-            <span class="ch-tb-arrow" aria-hidden="true">&rarr;</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- TRACK VIEW -->
-      <div class="ch-trackview" id="chTrackView" hidden>
-        <div class="ch-controls">
-          <button class="ch-btn-ghost" id="chChangeProgram" type="button">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-            Change Program
-          </button>
-          <div class="ch-diff-pills" id="chDiffPills" role="tablist">
-            <button class="ch-pill ch-pill-b active" type="button" data-chdiff="beginner">BEGINNER</button>
-            <button class="ch-pill ch-pill-i" type="button" data-chdiff="intermediate">INTERMEDIATE</button>
-            <button class="ch-pill ch-pill-a" type="button" data-chdiff="advanced">ADVANCED</button>
+      <div class="tb2-hero-grid">
+        <div class="tb2-hero-copy">
+          <span class="tb2-live-chip"><span class="tb2-live-dot"></span> LIVE · OCTOBER 2026 COHORT</span>
+          <h3 id="tbModalTitle">Cohort Progress Tracker</h3>
+          <p>Live task-by-task breakdown for both tracks — updated as the cohort advances.</p>
+          <div class="tb2-hero-stats">
+            <div class="tb2-hstat"><strong>33%</strong><span>Complete</span></div>
+            <div class="tb2-hstat tb2-hstat-mid"><strong>2<span class="tb2-hstat-slash">/</span>3</strong><span>Beginner tasks</span></div>
+            <div class="tb2-hstat"><strong>8</strong><span>Total tasks</span></div>
           </div>
         </div>
-        <div class="ch-cards" id="chCards"></div>
-        <p class="ch-footnote">💡 Each card holds one challenge for its difficulty level. Use <strong>Refresh</strong> (↻) for a new challenge at the same level, <strong>View More Info</strong> for the full brief, and the pills above to jump between difficulties.</p>
+        <div class="tb2-ring-wrap" aria-label="Day 10 of 30">
+          <svg class="tb2-ring" width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" class="tb2-ring-track"/>
+            <circle cx="60" cy="60" r="52" class="tb2-ring-fill"/>
+          </svg>
+          <div class="tb2-ring-label"><strong>10</strong><span>DAY</span><em>of 30</em></div>
+        </div>
+      </div>
+      <div class="tb2-day-bar"><div class="tb2-day-fill"></div></div>
+      <div class="tb2-day-ticks"><span>Day 1</span><span class="tb2-today">▲ Today · Day 10</span><span>Day 30 · Graduation</span></div>
+    </div>
+
+    <div class="tb2-modal-body">
+      <div class="tb2-summary">
+        <div class="tb2-chip tb2-chip-done"><span class="tb2-chip-num">✔</span><div><strong>Tasks 1–2 · Completed</strong><span>Days 1–6 — foundations laid</span></div></div>
+        <div class="tb2-chip tb2-chip-progress"><span class="tb2-chip-num tb2-chip-pulse"></span><div><strong>Task 3 · In Progress</strong><span>Days 7–10 — happening now</span></div></div>
+        <div class="tb2-chip tb2-chip-upcoming"><span class="tb2-chip-num">○</span><div><strong>Tasks 4–8 · Upcoming</strong><span>Days 11–30 — intermediate → advanced</span></div></div>
+      </div>
+
+      <div class="tb2-seg" role="tablist">
+        <span class="tb2-seg-glider" aria-hidden="true"></span>
+        <button class="tb2-seg-btn active" data-tbtrack="da" role="tab" type="button">📊 Data Analytics</button>
+        <button class="tb2-seg-btn" data-tbtrack="wd" role="tab" type="button">💻 Web Development</button>
+      </div>
+
+      <div class="tb2-panel" id="tbTrack-da">
+        <div class="tb2-task tb2-done">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-done">1</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Data Cleaning Basics</h4>
+              <span class="tb2-days">Days 1–3</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Clean a messy dataset using Google Sheets Excel. Identify and fix duplicate rows, blank cells, inconsistent formatting, and incorrect data type.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-done">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-done">2</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Formulas & Pivot Tables</h4>
+              <span class="tb2-days">Days 4–7</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use spreadsheet formulas and Pivot Tables to answer questions and extract useful insights from a dataset.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-progress">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-progress">3</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Data Visualization</h4>
+              <span class="tb2-days">Days 8–10</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-progress"><span class="tb2-mini-dot"></span> In Progress · Day 10</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Create charts and a simple dashboard that communicate useful insights from a dataset.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">4</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Introduction to SQL</h4>
+              <span class="tb2-days">Days 11–14</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Practice basic SQL queries and use them to answer real-world questions about data.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">5</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>SQL Joins & Aggregations</h4>
+              <span class="tb2-days">Days 15–18</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use JOIN, GROUP BY and aggregate functions such as COUNT, SUM and AVG to analyze information across multiple tables.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">6</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Lookup Functions & Data Wrangling</h4>
+              <span class="tb2-days">Days 19–21</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use VLOOKUP or XLOOKUP to combine related datasets and handle data mismatches.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">7</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Mini Analysis Project</h4>
+              <span class="tb2-days">Days 22–25</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-advanced">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Complete a small end-to-end analysis involving data cleaning formulas, Pivot Tables, Charts and recommendations.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">8</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Capstone Project</h4>
+              <span class="tb2-days">Days 26–30</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-advanced">Advanced</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Complete a larger project combining spreadsheet analysis and SQL using at least two related tables.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tb2-panel" id="tbTrack-wd" hidden>
+        <div class="tb2-task tb2-done">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-done">1</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the TechBridge Homepage</h4>
+              <span class="tb2-days">Days 1–3</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create the first version of the TechBridge website using HTML and CSS.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-done">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-done">2</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the TechBridge Programs Experience</h4>
+              <span class="tb2-days">Days 4–7</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a Programs experience that presents TechBridge's available learning programs.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-progress">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-progress">3</span>
+            <span class="tb2-line tb2-line-done"></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the Internship Tasks Experience</h4>
+              <span class="tb2-days">Days 8–10</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-beginner">Beginner</span>
+              <span class="tb2-status tb2-st-progress"><span class="tb2-mini-dot"></span> In Progress · Day 10</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">4</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build an Interactive Task Tracker</h4>
+              <span class="tb2-days">Days 11–14</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Use Javascript to make the internship task experience interactive and allow progress to be tracked.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">5</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the Intern Registration Experience</h4>
+              <span class="tb2-days">Days 15–18</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a professional registration/onboarding interface for TechBridge interns.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">6</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the Task SUbmission System</h4>
+              <span class="tb2-days">Days 19–21</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create an interface through which interns can prepare and submit their task work.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">7</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the intern Dashboard</h4>
+              <span class="tb2-days">Days 22–25</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-advanced">Advanced</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a dashboard where an intern can view their profile, progress, tasks, and submissions.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tb2-task tb2-upcoming">
+          <div class="tb2-timeline">
+            <span class="tb2-node tb2-node-upcoming">8</span>
+            <span class="tb2-line "></span>
+          </div>
+          <div class="tb2-task-body">
+            <div class="tb2-task-top">
+              <h4>Build the complete TechBridge Internship Platform</h4>
+              <span class="tb2-days">Days 26–30</span>
+            </div>
+            <div class="tb2-task-tags">
+              <span class="tb2-level tb2-lv-advanced">Advanced</span>
+              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
+            </div>
+            <div class="tb2-impact">
+              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Combine the different components created during the internship into a complete TechBridge platform.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tb2-ladder">
+        <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg> Skill Progression — Beginner to Advanced</h4>
+        <div class="tb2-ladder-steps">
+          <div class="tb2-step tb2-step-active">
+            <span class="tb2-step-check">✔</span>
+            <strong>Beginner</strong><em>Tasks 1–3</em>
+            <p>>Build the TechBridge Homepage</p>
+          </div>
+          <div class="tb2-step-arrow" aria-hidden="true">➜</div>
+          <div class="tb2-step">
+            <span class="tb2-step-num">2</span>
+            <strong>Intermediate</strong><em>Tasks 4–6</em>
+            <p>Build an Interactive Task Tracker.</p>
+          </div>
+          <div class="tb2-step-arrow" aria-hidden="true">➜</div>
+          <div class="tb2-step tb2-step-final">
+            <span class="tb2-step-num">3</span>
+            <strong>Advanced</strong><em>Tasks 7–8</em>
+            <p>Build the intern Dashboard.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <style>
+
+/* ============ TechBridge base + mobile-first responsive core ============ */
+:root {
+  --navy:#0b1f3f; --blue:#134b7c; --sky:#0ea5e9; --green:#22c55e;
+  --ink:#16324f; --mut:#5b6f88; --line:#e5ecf5; --bg:#f6f9fd;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+h1,h2,h3,h4 { line-height: 1.25; }
+.container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+.section-pad { padding: 3.5rem 0; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 2rem; }
+.section-head h2 { font-size: clamp(1.5rem, 4.5vw, 2.2rem); margin: .5rem 0 .5rem; }
+.section-head p { color: var(--mut); margin: 0; }
+
+.badge { display: inline-block; font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0369a1; background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 999px; padding: 5px 14px; }
+.page { display: none; }
+.page.active { display: block; animation: pgIn .3s ease; }
+@keyframes pgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Buttons */
+.btn-primary, .btn-ghost, .btn-wa {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 800; font-size: .95rem; padding: 14px 28px; border-radius: 999px;
+  text-decoration: none; cursor: pointer; border: 0; transition: transform .15s, box-shadow .15s;
+}
+.btn-primary { background: linear-gradient(120deg,#0284c7,#0ea5e9); color: #fff; box-shadow: 0 10px 24px rgba(14,165,233,.4); }
+.btn-ghost { background: transparent; color: var(--ink); border: 2px solid #cbd5e1; }
+.btn-wa { background: linear-gradient(120deg,#16a34a,#22c55e); color: #fff; box-shadow: 0 10px 24px rgba(34,197,94,.4); }
+.btn-block { width: 100%; }
+.btn-primary:hover, .btn-wa:hover { transform: translateY(-2px); }
+.btn-apply {
+  background: linear-gradient(120deg,#f59e0b,#fbbf24); color: #1e293b !important;
+  font-weight: 800; font-size: .85rem; padding: 10px 20px; border-radius: 999px;
+  text-decoration: none; box-shadow: 0 6px 16px rgba(245,158,11,.4);
+}
+
+/* ============ NAVBAR (mobile-first) ============ */
+.navbar {
+  position: sticky; top: 0; z-index: 1000; background: #fff;
+  box-shadow: 0 2px 14px rgba(15,45,85,.08);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px; }
+.brand { flex: none; display: flex; align-items: center; text-decoration: none; }
+.brand-logo { height: 38px; width: auto; display: block; }
+
+.nav-links {
+  position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+  background: #fff; flex-direction: column; align-items: stretch; gap: 0;
+  padding: 12px 20px 40px; overflow-y: auto;
+  transform: translateX(100%); transition: transform .3s cubic-bezier(.4,0,.2,1);
+  box-shadow: -8px 0 30px rgba(15,45,85,.12); z-index: 999;
+  display: flex;
+}
+.nav-links.open { transform: translateX(0); }
+.nav-link {
+  display: block; padding: 15px 6px; text-decoration: none; color: var(--ink);
+  font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--line);
+}
+.nav-link.active { color: #0284c7; }
+.btn-apply { margin: 14px 6px 0; text-align: center; display: block; }
+
+/* Dropdown (Program) — accordion style on mobile */
+.dropdown { position: relative; }
+.drop-toggle::after { content: "▾"; margin-left: 6px; font-size: .8em; }
+.dropdown-menu {
+  display: none; flex-direction: column; padding: 4px 0 6px 14px;
+}
+.dropdown.open .dropdown-menu { display: flex; }
+.dropdown-menu a {
+  display: block; padding: 11px 8px; text-decoration: none; color: var(--mut);
+  font-weight: 600; font-size: .92rem; border-bottom: 1px dashed var(--line);
+}
+
+.hamburger {
+  flex: none; width: 44px; height: 44px; border: 0; background: #f1f5fa;
+  border-radius: 12px; cursor: pointer; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 5px; z-index: 1001;
+}
+.hamburger span { display: block; width: 22px; height: 2.5px; border-radius: 3px; background: var(--ink); transition: transform .25s, opacity .25s; }
+.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ============ HERO ============ */
+.hero { background: linear-gradient(140deg, #0b1f3f 0%, #134b7c 60%, #0e628e 100%); color: #fff; padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 85% 15%, rgba(56,189,248,.3), transparent 45%),
+              radial-gradient(circle at 10% 90%, rgba(34,197,94,.2), transparent 40%);
+}
+.hero-grid { position: relative; }
+.hero-text h1 { font-size: clamp(1.9rem, 6vw, 3.2rem); margin: 1rem 0; }
+.grad { background: linear-gradient(90deg,#38bdf8,#4ade80); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-text > p { color: rgba(219,234,254,.9); max-width: 560px; font-size: clamp(.95rem, 2.5vw, 1.08rem); }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 1.6rem 0 2rem; }
+.hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.4); }
+.hero-stats { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-stats > div {
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 14px; padding: 12px 20px; min-width: 100px;
+}
+.hero-stats strong { display: block; font-size: 1.4rem; }
+.hero-stats span { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #93c5fd; }
+
+/* ============ FEATURES / STEPS / APPLY / FOOTER (mobile-first grids) ============ */
+.features { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 3rem 20px; }
+.feature-card, .apply-card, .step {
+  background: #fff; border: 1px solid var(--line); border-radius: 18px;
+  padding: 26px 22px; box-shadow: 0 6px 20px rgba(15,45,85,.06);
+}
+.feature-card h3 { margin: 12px 0 6px; }
+.feature-card p { margin: 0; color: var(--mut); font-size: .9rem; }
+.f-icon {
+  width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd;
+}
+.f-icon.wa { background: #dcfce7; color: #16a34a; border-color: #bbf7d0; }
+
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+.about-img img { border-radius: 20px; box-shadow: 0 14px 40px rgba(15,45,85,.15); width: 100%; display: block; }
+.about-img.img-fallback { min-height: 220px; border-radius: 20px; background: linear-gradient(120deg,#0b1f3f,#0e628e); display: flex; align-items: center; justify-content: center; }
+.check-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 10px; }
+.check-list li { position: relative; padding-left: 28px; color: #33506e; }
+.check-list li::before {
+  content: "✔"; position: absolute; left: 0; top: 2px; width: 19px; height: 19px; border-radius: 6px;
+  background: #dcfce7; color: #16a34a; font-size: .65rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.check-list .badge { margin-bottom: 4px; }
+
+.steps { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.step-num {
+  width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg,#0284c7,#0ea5e9); color: #fff; font-weight: 800; font-size: 1.1rem;
+  box-shadow: 0 6px 16px rgba(14,165,233,.35); margin-bottom: 10px;
+}
+.step h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.step p { margin: 0; color: var(--mut); font-size: .88rem; }
+
+.cta-band {
+  margin-top: 2.5rem; background: linear-gradient(120deg,#0b1f3f,#134b7c 60%,#0e628e);
+  border-radius: 20px; padding: 28px 24px; color: #fff; text-align: center;
+  display: flex; flex-direction: column; gap: 16px; align-items: center;
+}
+.cta-band h3 { margin: 0 0 4px; }
+.cta-band p { margin: 0; color: rgba(203,225,245,.85); }
+
+.apply-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.apply-card { position: relative; }
+.apply-card.highlight { border: 2px solid #4ade80; background: linear-gradient(180deg,#f0fdf4,#fff); }
+.apply-step-tag {
+  position: absolute; top: -11px; left: 18px; font-size: .64rem; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; background: var(--navy); color: #fff;
+  padding: 4px 12px; border-radius: 999px;
+}
+.apply-card h3 { margin: 12px 0 6px; }
+.apply-card > p { color: var(--mut); font-size: .88rem; margin: 0 0 16px; }
+.apply-form { display: grid; gap: 12px; }
+.apply-form input[type="text"], .apply-form input[type="email"] {
+  font: inherit; padding: 13px 14px; border: 1.5px solid #d7e2ef; border-radius: 12px; outline: none; width: 100%;
+}
+.apply-form input:focus { border-color: #0ea5e9; box-shadow: 0 0 0 4px rgba(14,165,233,.14); }
+.file-drop {
+  display: flex; align-items: center; gap: 12px; border: 2px dashed #b6c9de; border-radius: 14px;
+  padding: 16px; cursor: pointer; color: #33506e; background: #f7fafd; transition: border-color .15s, background .15s;
+}
+.file-drop:hover { border-color: #0ea5e9; background: #f0f9ff; }
+.file-drop svg { flex: none; color: #0284c7; }
+.file-drop span { font-size: .82rem; line-height: 1.4; }
+.file-drop small { display: block; color: var(--mut); }
+.file-error { margin: 0; font-size: .76rem; font-weight: 700; color: #dc2626; }
+.confirm-check { display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; color: #33506e; cursor: pointer; }
+.confirm-check input { margin-top: 4px; width: 17px; height: 17px; accent-color: #16a34a; flex: none; }
+.apply-success {
+  display: flex; align-items: center; gap: 14px; background: #f0fdf4; border: 1px solid #bbf7d0;
+  border-radius: 14px; padding: 16px; color: #15803d; font-size: .88rem; margin-top: 14px;
+}
+.apply-success p { margin: 0; }
+
+.footer { background: var(--navy); color: #cbd5e1; margin-top: 3rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 26px; padding: 3rem 20px 2rem; }
+.footer h4 { color: #fff; margin: 0 0 12px; font-size: .92rem; }
+.footer-grid a { display: block; color: #93c5fd; text-decoration: none; font-size: .86rem; padding: 4px 0; }
+.footer-grid p { font-size: .86rem; color: #94a3b8; margin: 10px 0 0; }
+.footer-logo-chip { display: inline-flex; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 8px 12px; }
+.footer-logo { height: 30px; }
+.footer-connect-list { display: flex; gap: 10px; }
+.footer-social-link {
+  width: 40px !important; height: 40px; border-radius: 12px !important; padding: 0 !important;
+  display: flex !important; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: #fff !important;
+}
+.footer-bar { border-top: 1px solid rgba(255,255,255,.12); text-align: center; padding: 18px 20px; font-size: .78rem; color: #7a8ca3; }
+
+/* ============ TABLET (≥640px) ============ */
+@media (min-width: 640px) {
+  .features { grid-template-columns: repeat(3, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .apply-grid { grid-template-columns: repeat(2, 1fr); }
+  .apply-card:last-child { grid-column: 1 / -1; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-band { flex-direction: row; justify-content: space-between; text-align: left; padding: 30px 36px; }
+}
+
+/* ============ DESKTOP (≥900px) ============ */
+@media (min-width: 900px) {
+  .hamburger { display: none; }
+  .nav-links {
+    position: static; transform: none; flex-direction: row; align-items: center;
+    padding: 0; gap: 6px; box-shadow: none; overflow: visible; background: transparent;
+  }
+  .nav-link { padding: 10px 14px; border-bottom: 2px solid transparent; font-size: .9rem; }
+  .nav-link.active { border-bottom-color: #0284c7; }
+  .btn-apply { margin: 0 0 0 8px; display: inline-flex; }
+  .dropdown-menu {
+    position: absolute; top: calc(100% + 8px); left: 0; min-width: 230px; padding: 8px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(15,45,85,.15); display: none;
+  }
+  .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+  .dropdown-menu a { padding: 10px 12px; border-bottom: 0; border-radius: 9px; }
+  .dropdown-menu a:hover { background: #f0f7ff; color: #0284c7; }
+  .about-grid { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: repeat(4, 1fr); }
+  .apply-grid { grid-template-columns: repeat(3, 1fr); }
+  .apply-card:last-child { grid-column: auto; }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
+}
+
+/* Safe-area support for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .nav-links { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+  .footer-bar { padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
+}
+
 /* ============ TechBridge cohort banner & modal (v2 aesthetic) ============ */
+.tb2-news-wrap { margin: -0.5rem 0 2.5rem; }
+.tb2-news {
+  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between;
+  gap: 18px; flex-wrap: wrap; border-radius: 18px; padding: 20px 24px;
+  background: linear-gradient(120deg, #0b1f3f 0%, #123c6e 55%, #0e5e8f 100%);
+  border: 1px solid rgba(125, 200, 255, .25);
+  box-shadow: 0 14px 40px rgba(6, 30, 60, .35), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.tb2-news-shine {
+  position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.09), transparent);
+  animation: tb2-shine 5.5s ease-in-out infinite; pointer-events: none;
+}
+@keyframes tb2-shine { 0%,55% { left: -60%; } 100% { left: 130%; } }
+.tb2-news-left { display: flex; align-items: center; gap: 16px; flex: 1 1 420px; }
+.tb2-live-ring {
+  flex: none; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: rgba(34, 197, 94, .14); border: 1px solid rgba(34, 197, 94, .4);
+}
+.tb2-live-dot {
+  width: 12px; height: 12px; border-radius: 50%; background: #22c55e; position: relative;
+}
+.tb2-live-dot::after {
+  content: ""; position: absolute; inset: -5px; border-radius: 50%;
+  border: 2px solid rgba(34,197,94,.55); animation: tb2-pulse 1.6s ease-out infinite;
+}
+@keyframes tb2-pulse { 0% { transform: scale(.55); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+.tb2-news-kicker {
+  font-size: .66rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;
+  color: #7dd3fc;
+}
+.tb2-news-title { margin: 3px 0 3px; color: #fff; font-size: 1.18rem; line-height: 1.3; }
+.tb2-title-accent {
+  background: linear-gradient(90deg, #4ade80, #a3e635); -webkit-background-clip: text; background-clip: text;
+  color: transparent; font-weight: 800;
+}
+.tb2-news-sub { margin: 0; color: rgba(203, 225, 245, .8); font-size: .85rem; }
+.tb2-news-right { display: flex; align-items: center; gap: 14px; }
+.tb2-day-pill {
+  display: flex; flex-direction: column; align-items: center; line-height: 1.05;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  border-radius: 14px; padding: 8px 16px; color: #fff;
+}
+.tb2-day-pill strong { font-size: 1.05rem; letter-spacing: .04em; }
+.tb2-day-pill em { font-style: normal; font-size: .68rem; color: #93c5fd; text-transform: uppercase; letter-spacing: .1em; }
+.tb2-news-btn {
+  display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer;
+  background: linear-gradient(120deg, #fbbf24, #f59e0b); color: #1e293b;
+  font-weight: 800; font-size: .9rem; padding: 13px 22px; border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, .4);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.tb2-news-btn svg { transition: transform .18s ease; }
+.tb2-news-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(245, 158, 11, .5); }
+.tb2-news-btn:hover svg { transform: translateX(4px); }
+
 /* ---------- modal ---------- */
 .tb2-overlay {
   position: fixed; inset: 0; z-index: 99999; padding: 3vh 14px; overflow-y: auto;
@@ -665,6 +1115,7 @@ window.addEventListener('load', function() {
   display: flex; align-items: flex-start; justify-content: center;
   animation: tb2-fade .25s ease;
 }
+.tb2-overlay[hidden] { display: none !important; }
 @keyframes tb2-fade { from { opacity: 0; } to { opacity: 1; } }
 .tb2-modal {
   position: relative; width: 100%; max-width: 880px; border-radius: 22px; overflow: hidden;
@@ -845,6 +1296,8 @@ window.addEventListener('load', function() {
   .tb2-step-arrow { transform: rotate(90deg); }
   .tb2-modal-body { padding: 18px 16px 22px; }
   .tb2-hero { padding: 22px 18px 18px; }
+  .tb2-news { padding: 18px; }
+  .tb2-news-right { width: 100%; justify-content: space-between; }
 }
 
 /* ============ Navbar news headline ticker (visible on all pages) ============ */
@@ -1073,22 +1526,43 @@ window.addEventListener('load', function() {
 }
 
 
-.f-icon img, .tc-icon img, .ch-tb-icon img {
-  width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit;
-}
-.td-icon-img { width: 26px; height: 26px; border-radius: 7px; vertical-align: -5px; margin-right: 8px; object-fit: cover; box-shadow: 0 0 10px rgba(255,255,255,.35); }
-.tc-icon img { border-radius: 17px; }
-.ch-tb-icon { overflow: hidden; }
 .tc-icon svg { display: block; }
-
+.tc-da .tc-icon svg { color: #0284c7; }
+.tc-wd .tc-icon svg { color: #16a34a; }
+.td-hero h2 svg { width: 26px; height: 26px; vertical-align: -4px; margin-right: 8px; }
+.td-da .td-hero h2 svg { color: #7dd3fc; }
+.td-wd .td-hero h2 svg { color: #86efac; }
 
 </style>
 
 <script>
 (function () {
+  var modal = document.getElementById('tbModal');
+  var seg = modal.querySelector('.tb2-seg');
+  document.getElementById('tb-open-details').addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+  function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
+  document.getElementById('tbCloseModal').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
   // Seamless marquee: duplicate ticker items so translateX(-50%) loops cleanly
   var track = document.getElementById('navNewsTrack');
   if (track) { track.innerHTML += track.innerHTML; }
+
+  var btns = seg.querySelectorAll('.tb2-seg-btn');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var isWD = btn.dataset.tbtrack === 'wd';
+      seg.classList.toggle('wd', isWD);
+      document.getElementById('tbTrack-da').hidden = isWD;
+      document.getElementById('tbTrack-wd').hidden = !isWD;
+    });
+  });
 })();
 </script>
 
@@ -1111,12 +1585,12 @@ window.addEventListener('load', function() {
     ],
     'web-development': [
       { days: 'Days 1–3',  level: 'beginner',     title: 'Build the TechBridge Homepage', desc: 'Create the first version of the TechBridge website using HTML and CSS.' },
-      { days: 'Days 4–7',  level: 'beginner',     title: 'Build the TechBridge Programs Experience', desc: 'Create a Programs experience that presents TechBridge’s available learning programs.' },
+      { days: 'Days 4–7',  level: 'beginner',     title: 'Build the TechBridge Programs Experience', desc: 'Create a Programs experience that presents TechBridge's available learning programs.' },
       { days: 'Days 8–10', level: 'beginner',     title: 'Build the Internship Tasks Experience', desc: 'Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.' },
       { days: 'Days 11–14', level: 'intermediate', title: 'Build an Interactive Task Tracker', desc: 'Use JavaScript to make the internship task experience interactive and allow progress to be tracked.' },
       { days: 'Days 15–18', level: 'intermediate', title: 'Build the Intern Registration Experience', desc: 'Create a professional registration/onboarding interface for TechBridge interns.' },
       { days: 'Days 19–21', level: 'intermediate', title: 'Build the Task Submission System', desc: 'Create an interface through which interns can prepare and submit their task work.' },
-      { days: 'Days 22–25', level: 'intermediate',     title: 'Build the Intern Dashboard', desc: 'Create a dashboard where an intern can view their profile, progress, tasks, and submissions.' },
+      { days: 'Days 22–25', level: 'advanced',     title: 'Build the Intern Dashboard', desc: 'Create a dashboard where an intern can view their profile, progress, tasks, and submissions.' },
       { days: 'Days 26–30', level: 'advanced',     title: 'Build the Complete TechBridge Internship Platform', desc: 'Combine the different components created during the internship into a complete TechBridge platform.' }
     ]
   };
@@ -1218,8 +1692,8 @@ window.addEventListener('load', function() {
   /* ================= Choose Your Track — program interface ================= */
   var PREFIX = 'techbridge-tracker-';
 
-  var ICON_DA = '<img src="rt-icon-data.png" alt="" class="td-icon-img">';
-  var ICON_WD = '<img src="rt-icon-code.png" alt="" class="td-icon-img">';
+  var ICON_DA = '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="7" cy="15" r="1.4" fill="currentColor" stroke="none"/><circle cx="11" cy="10" r="1.4" fill="currentColor" stroke="none"/><circle cx="14" cy="13" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="6" r="1.4" fill="currentColor" stroke="none"/></svg>';
+  var ICON_WD = '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 9l-2.5 2.5L8 14M16 9l2.5 2.5L16 14M13 8.5l-2 7"/><path d="M8 21h8"/></svg>';
 
   var TRACKS = {
     'data-analytics': {
@@ -1238,8 +1712,8 @@ window.addEventListener('load', function() {
         { days: 'Days 11–14', level: 'intermediate', title: 'SQL Joins, Aggregations & Subqueries', desc: 'Combine multiple tables to answer complex business questions in a single query.' },
         { days: 'Days 15–18', level: 'intermediate', title: 'Data Cleaning with Python (Pandas)', desc: 'Handle messy, real-world data at scale — the work that consumes 70% of an analyst’s time.' },
         { days: 'Days 19–22', level: 'intermediate', title: 'Exploratory Analysis & BI Dashboards (Power BI)', desc: 'Build the interactive dashboards companies rely on for daily decision-making.' },
-        { days: 'Days 23–26', level: 'intermediate',     title: 'Statistics & A/B Testing', desc: 'Move from describing data to proving causation — the skill behind growth decisions.' },
-        { days: 'Days 27–30', level: 'advanced',     title: 'Capstone Project', desc: 'A portfolio-ready project from raw data to boardroom insight — your proof of job readiness.' }
+        { days: 'Days 23–26', level: 'advanced',     title: 'Statistics & A/B Testing', desc: 'Move from describing data to proving causation — the skill behind growth decisions.' },
+        { days: 'Days 27–30', level: 'advanced',     title: 'Capstone — End-to-End Analytics Project', desc: 'A portfolio-ready project from raw data to boardroom insight — your proof of job readiness.' }
       ]
     },
     'web-development': {
@@ -1258,7 +1732,7 @@ window.addEventListener('load', function() {
         { days: 'Days 11–14', level: 'intermediate', title: 'Build an Interactive Task Tracker', desc: 'Use JavaScript to make the internship task experience interactive and allow progress to be tracked.' },
         { days: 'Days 15–18', level: 'intermediate', title: 'Build the Intern Registration Experience', desc: 'Create a professional registration/onboarding interface for TechBridge interns.' },
         { days: 'Days 19–21', level: 'intermediate', title: 'Build the Task Submission System', desc: 'Create an interface through which interns can prepare and submit their task work.' },
-        { days: 'Days 22–25', level: 'intermediate',     title: 'Build the Intern Dashboard', desc: 'Create a dashboard where an intern can view their profile, progress, tasks, and submissions.' },
+        { days: 'Days 22–25', level: 'advanced',     title: 'Build the Intern Dashboard', desc: 'Create a dashboard where an intern can view their profile, progress, tasks, and submissions.' },
         { days: 'Days 26–30', level: 'advanced',     title: 'Build the Complete TechBridge Internship Platform', desc: 'Combine the different components created during the internship into a complete TechBridge platform.' }
       ]
     }
@@ -1365,7 +1839,7 @@ window.addEventListener('load', function() {
 
     detail.querySelectorAll('input[data-task]').forEach(function (cb) {
       cb.addEventListener('change', function () {
-        var i = parseInt(cb.getAttribute('data-task'), 16);
+        var i = parseInt(cb.getAttribute('data-task'), 10);
         var completed = getDone(key);
         if (cb.checked && completed.indexOf(i) === -1) completed.push(i);
         if (!cb.checked) completed = completed.filter(function (x) { return x !== i; });
@@ -1417,469 +1891,256 @@ window.addEventListener('load', function() {
 </script>
 
 
-<!-- ================= CHALLENGE HUB STYLES & LOGIC ================= -->
+<!-- ================= INTERN LOGIN MODAL ================= -->
 <style>
-/* ---------- floating button ---------- */
-.ch-fab {
-  position: fixed; top: 120px; right: 18px; z-index: 9000;
-  display: inline-flex; align-items: center; gap: 9px;
-  border: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: .86rem; color: #fff;
-  padding: 12px 20px 12px 14px; border-radius: 999px;
-  background: linear-gradient(120deg, #69e924, #03ba12 55%, #484b4c);
-  box-shadow: 0 10px 26px rgba(142, 238, 168, 0.853), inset 0 1px 0 rgba(255,255,255,.25);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.ch-fab:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 34px rgba(99,102,241,.55), inset 0 1px 0 rgba(255,255,255,.25); }
-.ch-fab-icon { display: inline-flex; }
-.ch-fab-ring { position: absolute; inset: -4px; border-radius: 999px; border: 2px solid rgba(139,92,246,.55); animation: ch-fabpulse 1.8s ease-out infinite; pointer-events: none; }
-@keyframes ch-fabpulse { 0% { transform: scale(.92); opacity: 1; } 100% { transform: scale(1.28); opacity: 0; } }
-@media (max-width: 720px) {
-  .ch-fab { top: auto; bottom: 18px; right: 16px; padding: 13px 18px 13px 14px; }
-  .ch-fab-text { display: none; }
-}
-
-/* ---------- real-time live icon & image ---------- */
-
-.ch-fab-icon { color: #fff; }
-.ch-fab-img { display: block; width: 22px; height: 22px; border-radius: 6px; object-fit: cover; box-shadow: 0 0 8px rgba(255,255,255,.55); }
-.ch-hero-badge { position: relative; overflow: visible; }
-.ch-live-photo {
-  width: 100%; height: 100%; object-fit: cover; border-radius: 22px; display: block;
-  border: 1px solid rgba(255,255,255,.25);
-  box-shadow: inset 0 0 30px rgba(0,0,0,.3);
-}
-.ch-live-badge-dot {
-  position: absolute; top: -6px; right: -6px;
-  width: 24px; height: 24px; border-radius: 50%;
-  background: rgba(34,197,94,.16); border: 1px solid rgba(34,197,94,.5);
-  display: flex; align-items: center; justify-content: center;
-}
-.ch-live-badge-dot .tb2-live-dot { width: 8px; height: 8px; }
-
-/* ---------- modal shell ---------- */
-.ch-overlay {
-  position: fixed; inset: 0; z-index: 99999; padding: 3vh 14px; overflow-y: auto;
-  background: rgba(10, 8, 30, .72); backdrop-filter: blur(6px);
+.tb-login-overlay {
+  position: fixed; inset: 0; z-index: 100000; padding: 4vh 14px; overflow-y: auto;
+  background: rgba(5, 14, 30, .7); backdrop-filter: blur(6px);
   display: flex; align-items: flex-start; justify-content: center;
-  animation: ch-fade .25s ease;
+  animation: tbLoginFade .25s ease;
 }
-@keyframes ch-fade { from { opacity: 0; } to { opacity: 1; } }
-.ch-modal {
-  position: relative; width: 100%; max-width: 940px; border-radius: 22px; overflow: hidden;
-  background: #f6f7fd; box-shadow: 0 30px 80px rgba(0,0,0,.5);
-  animation: ch-rise .35s cubic-bezier(.2,.9,.3,1.15);
+@keyframes tbLoginFade { from { opacity: 0; } to { opacity: 1; } }
+.tb-login-overlay[hidden] { display: none; }
+.tb-login-modal {
+  position: relative; width: 100%; max-width: 430px; border-radius: 22px; overflow: hidden;
+  background: #f6f9fd; box-shadow: 0 30px 80px rgba(0,0,0,.45);
+  animation: tbLoginRise .35s cubic-bezier(.2,.9,.3,1.2);
 }
-@keyframes ch-rise { from { opacity: 0; transform: translateY(28px) scale(.97); } to { opacity: 1; transform: none; } }
-
-.ch-hero { position: relative; background: linear-gradient(120deg, #1e1b4b, #2b951d 55%, #0e7490); padding: 26px 28px 24px; color: #fff; }
-.ch-hero-bg {
-  position: absolute; inset: 0; pointer-events: none; opacity: .55;
-  background: radial-gradient(circle at 85% 10%, rgba(167,139,250,.4), transparent 45%),
-              radial-gradient(circle at 8% 95%, rgba(56,189,248,.3), transparent 42%);
+@keyframes tbLoginRise { from { opacity: 0; transform: translateY(28px) scale(.97); } to { opacity: 1; transform: none; } }
+.tb-login-hero {
+  position: relative; padding: 26px 28px 22px; color: #fff;
+  background: linear-gradient(120deg, #0b1f3f, #134b7c 60%, #0e628e);
 }
-.ch-close {
-  position: absolute; top: 14px; right: 14px; z-index: 2; width: 34px; height: 34px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.12); color: #fff;
-  cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s;
+.tb-login-hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background: radial-gradient(circle at 85% 15%, rgba(56,189,248,.35), transparent 45%);
 }
-.ch-close:hover { background: rgba(255,255,255,.25); }
-.ch-hero-grid { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.ch-live-chip {
-  display: inline-flex; align-items: center; gap: 8px; font-size: .64rem; font-weight: 800;
-  letter-spacing: .14em; color: #c4b5fd; background: rgba(167,139,250,.14);
-  border: 1px solid rgba(167,139,250,.4); border-radius: 999px; padding: 5px 12px;
+.tb-login-hero h3 { position: relative; margin: 8px 0 4px; font-size: 1.35rem; }
+.tb-login-hero p { position: relative; margin: 0; font-size: .82rem; color: rgba(203,225,245,.85); }
+.tb-login-live {
+  position: relative; display: inline-flex; align-items: center; gap: 7px;
+  font-size: .62rem; font-weight: 800; letter-spacing: .14em; color: #86efac;
+  background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.35);
+  border-radius: 999px; padding: 4px 11px; text-transform: uppercase;
 }
-.ch-hero-copy h3 { margin: 10px 0 5px; font-size: 1.55rem; }
-.ch-hero-copy p { margin: 0; color: rgba(226,232,240,.85); font-size: .86rem; max-width: 600px; line-height: 1.55; }
-.ch-hero-badge {
-  flex: none; width: 84px; height: 84px; border-radius: 24px; display: flex; align-items: center; justify-content: center;
-  color: #fde68a; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
-  box-shadow: inset 0 0 30px rgba(253,230,138,.12);
+.tb-login-close {
+  position: absolute; top: 14px; right: 14px; z-index: 2; width: 32px; height: 32px;
+  border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.12);
+  color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
-.ch-body { padding: 24px 28px 28px; }
-
-/* ---------- intro ---------- */
-.ch-intro-msg { background: #fff; border: 1px solid #e7e9f6; border-radius: 16px; padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 4px 14px rgba(30,27,75,.06); }
-.ch-intro-msg h4 { margin: 0 0 8px; font-size: 1.05rem; color: #1e1b4b; }
-.ch-intro-msg p { margin: 0; font-size: .86rem; color: #556074; line-height: 1.65; }
-.ch-choose-label { margin: 0 0 12px; font-size: .95rem; color: #1e1b4b; }
-.ch-track-btns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.ch-track-btn {
-  position: relative; overflow: hidden; display: flex; align-items: center; gap: 14px; text-align: left;
-  border: 1px solid #e7e9f6; border-radius: 18px; background: #fff; padding: 18px; cursor: pointer; font: inherit;
-  box-shadow: 0 4px 14px rgba(30,27,75,.06); transition: transform .18s ease, box-shadow .18s ease;
+.tb-login-close:hover { background: rgba(255,255,255,.25); }
+.tb-login-body { padding: 22px 28px 26px; }
+.tb-login-field { margin-bottom: 15px; }
+.tb-login-field label { display: block; font-size: .74rem; font-weight: 800; letter-spacing: .04em; color: #16324f; margin-bottom: 6px; text-transform: uppercase; }
+.tb-login-field input, .tb-login-field select {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: .9rem; color: #16324f;
+  padding: 12px 14px; border: 1.5px solid #d7e2ef; border-radius: 12px; background: #fff;
+  transition: border-color .15s, box-shadow .15s; outline: none;
 }
-.ch-track-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(30,27,75,.14); }
-.ch-tb-icon { flex: none; width: 52px; height: 52px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
-.ch-tb-da .ch-tb-icon { background: #e0f2fe; border: 1px solid #bae6fd; }
-.ch-tb-wd .ch-tb-icon { background: #dcfce7; border: 1px solid #bbf7d0; }
-.ch-tb-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-.ch-tb-text strong { font-size: 1.02rem; color: #1e1b4b; }
-.ch-tb-text small { font-size: .74rem; color: #7a8ca3; }
-.ch-tb-arrow { font-size: 1.1rem; color: #a5b4fc; transition: transform .18s ease; }
-.ch-track-btn:hover .ch-tb-arrow { transform: translateX(5px); }
-
-/* ---------- track view controls ---------- */
-.ch-controls { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
-.ch-btn-ghost {
-  display: inline-flex; align-items: center; gap: 7px; border: 1px solid #d8dcf0; background: #fff; color: #4c4a86;
-  font: inherit; font-size: .78rem; font-weight: 800; padding: 9px 16px; border-radius: 999px; cursor: pointer;
-  transition: background .15s, transform .15s;
+.tb-login-field input:focus, .tb-login-field select:focus {
+  border-color: #0ea5e9; box-shadow: 0 0 0 4px rgba(14,165,233,.14);
 }
-.ch-btn-ghost:hover { background: #eef0fb; transform: translateY(-1px); }
-.ch-diff-pills { display: inline-flex; background: #e9ebf8; border-radius: 999px; padding: 5px; gap: 4px; }
-.ch-pill {
-  border: 0; background: transparent; cursor: pointer; font: inherit; font-size: .78rem; font-weight: 800;
-  color: #667085; padding: 8px 16px; border-radius: 999px; transition: background .2s, color .2s, box-shadow .2s;
+.tb-login-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235b6f88' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
 }
-.ch-pill.active { color: #fff; box-shadow: 0 5px 14px rgba(30,27,75,.25); }
-.ch-pill-b.active { background: linear-gradient(120deg, #16a34a, #22c55e); }
-.ch-pill-i.active { background: linear-gradient(120deg, #2563eb, #0ea5e9); }
-.ch-pill-a.active { background: linear-gradient(120deg, #7c3aed, #a855f7); }
-
-/* ---------- challenge cards ---------- */
-.ch-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.ch-card {
-  position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid #e7e9f6;
-  border-radius: 18px; padding: 18px 18px 16px; box-shadow: 0 4px 14px rgba(30,27,75,.06);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .2s; animation: ch-cardin .35s ease both;
+.tb-login-btn {
+  width: 100%; border: 0; cursor: pointer; margin-top: 6px;
+  background: linear-gradient(120deg, #0284c7, #0ea5e9); color: #fff;
+  font-weight: 800; font-size: .95rem; padding: 14px; border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(14,165,233,.4); transition: transform .15s, box-shadow .15s;
 }
-@keyframes ch-cardin { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-.ch-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(30,27,75,.13); }
-.ch-card.ch-flash { animation: ch-flash .9s ease; }
-@keyframes ch-flash { 0%, 60% { box-shadow: 0 0 0 4px rgba(99,102,241,.35); } 100% { box-shadow: 0 4px 14px rgba(30,27,75,.06); } }
-.ch-card[data-level="beginner"] { border-top: 4px solid #22c55e; }
-.ch-card[data-level="intermediate"] { border-top: 4px solid #0ea5e9; }
-.ch-card[data-level="advanced"] { border-top: 4px solid #8b5cf6; }
-
-.ch-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.ch-level { font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; }
-.ch-lv-beginner { background: #dcfce7; color: #15803d; }
-.ch-lv-intermediate { background: #dbeafe; color: #1d4ed8; }
-.ch-lv-advanced { background: #ede9fe; color: #6d28d9; }
-.ch-icon-btn {
-  width: 30px; height: 30px; border-radius: 9px; border: 1px solid #e7e9f6; background: #f6f7fd;
-  cursor: pointer; font-size: .95rem; line-height: 1; display: inline-flex; align-items: center; justify-content: center;
-  color: #4c4a86; transition: background .15s, transform .35s ease;
+.tb-login-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(14,165,233,.5); }
+.tb-login-error {
+  margin: 0 0 12px; font-size: .78rem; font-weight: 700; color: #dc2626;
+  background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 9px 12px;
 }
-.ch-icon-btn:hover { background: #eef0fb; }
-.ch-icon-btn.ch-spin { transform: rotate(360deg); }
-
-.ch-card h4 { margin: 0 0 7px; font-size: .98rem; color: #1e1b4b; line-height: 1.35; }
-.ch-desc { margin: 0 0 13px; font-size: .8rem; color: #556074; line-height: 1.55; flex: 1; }
-
-.ch-details { border-top: 1px dashed #dfe3f2; margin-bottom: 13px; padding-top: 12px; display: grid; gap: 10px; }
-.ch-details[hidden] { display: none; }
-.ch-dt-row { display: grid; gap: 3px; }
-.ch-dt-label { font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #8b93ad; }
-.ch-dt-text { margin: 0; font-size: .78rem; color: #46536a; line-height: 1.55; }
-.ch-skill-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.ch-skill-chip { font-size: .68rem; font-weight: 700; color: #4338ca; background: #eef2ff; border: 1px solid #e0e7ff; padding: 3px 10px; border-radius: 999px; }
-.ch-tip { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 8px 11px; font-size: .74rem; color: #92400e; line-height: 1.5; margin: 0; }
-
-.ch-card-foot { display: flex; gap: 8px; }
-.ch-view-btn {
-  flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
-  border: 1px solid #d8dcf0; background: #fff; color: #4c4a86; font: inherit; font-size: .78rem; font-weight: 800;
-  padding: 10px 12px; border-radius: 999px; cursor: pointer; transition: background .15s, border-color .15s, color .15s;
-}
-.ch-view-btn:hover { background: #eef0fb; }
-.ch-view-btn.open { background: linear-gradient(120deg, #4f46e5, #0ea5e9); border-color: transparent; color: #fff; }
-
-.ch-footnote { margin: 18px 0 0; font-size: .76rem; color: #7a8ca3; line-height: 1.6; }
-
-@media (max-width: 720px) {
-  .ch-body { padding: 18px 16px 22px; }
-  .ch-hero { padding: 22px 18px 20px; }
-  .ch-hero-badge { width: 64px; height: 64px; border-radius: 18px; }
-  .ch-controls { flex-direction: column; align-items: stretch; }
-  .ch-diff-pills { justify-content: center; }
-  .ch-diff-pills .ch-pill { flex: 1; text-align: center; padding: 8px 8px; }
-}
+.tb-login-error[hidden] { display: none; }
+.tb-login-foot { margin: 14px 0 0; text-align: center; font-size: .74rem; color: #7a8ca3; }
 </style>
+
+<div class="tb-login-overlay" id="tbLoginModal" hidden>
+  <div class="tb-login-modal" role="dialog" aria-modal="true" aria-labelledby="tbLoginTitle">
+    <div class="tb-login-hero">
+      <button class="tb-login-close" id="tbLoginClose" type="button" aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <span class="tb-login-live"><span class="tb2-live-dot" style="width:8px;height:8px;"></span> Intern Portal</span>
+      <h3 id="tbLoginTitle">Intern Login</h3>
+      <p>Enter your details to open your personal internship dashboard.</p>
+    </div>
+    <div class="tb-login-body">
+      <p class="tb-login-error" id="tbLoginError" hidden>Please fill in every field correctly.</p>
+      <form id="tbLoginForm" novalidate>
+        <div class="tb-login-field">
+          <label for="tbLoginName">Full Name</label>
+          <input type="text" id="tbLoginName" placeholder="e.g. Adaeze Okafor" autocomplete="name">
+        </div>
+        <div class="tb-login-field">
+          <label for="tbLoginProgram">Programme</label>
+          <select id="tbLoginProgram">
+            <option value="">Select your track…</option>
+            <option value="data-analytics">Data Analytics</option>
+            <option value="web-development">Web Development</option>
+          </select>
+        </div>
+        <div class="tb-login-field">
+          <label for="tbLoginId">Student ID</label>
+          <input type="text" id="tbLoginId" placeholder="e.g. TB-2026-0147" autocomplete="off">
+        </div>
+        <button type="submit" class="tb-login-btn" id="tbLoginSubmit">Open My Dashboard →</button>
+      </form>
+      <p class="tb-login-foot">New here? Apply first — your Student ID arrives after onboarding.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var modal = document.getElementById('tbLoginModal');
+  var navBtn = document.getElementById('tbLoginNav');
+  var form = document.getElementById('tbLoginForm');
+  var err = document.getElementById('tbLoginError');
+  var KEY = 'techbridge-intern';
+
+  function openModal() { modal.hidden = false; document.body.style.overflow = 'hidden'; err.hidden = true; }
+  function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
+
+  navBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+  document.getElementById('tbLoginClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('tbLoginName').value.trim();
+    var program = document.getElementById('tbLoginProgram').value;
+    var sid = document.getElementById('tbLoginId').value.trim();
+    if (!name || !program || !sid) { err.hidden = false; return; }
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ name: name, program: program, studentId: sid, loginAt: Date.now() }));
+    } catch (err2) {}
+    window.location.href = 'dashboard.html';
+  });
+})();
+</script>
+
 
 <script>
 (function () {
   'use strict';
 
-  /* ================= Challenge Hub data ================= */
-  var CH_TRACKS = {
-    'data-analytics': {
-      label: 'Data Analytics', icon: '📊',
-      challenges: {
-        beginner: [
-          { title: 'Messy Sales Data Rescue', short: 'A retail sales export is full of duplicates, blank cells and mixed date formats. Clean it until it is analysis-ready.',
-            objective: 'Take a raw, messy CSV export and apply a full cleaning routine: remove duplicates, fill or flag blanks, standardise dates and fix data types.',
-            skills: ['Excel / Google Sheets', 'Data Cleaning', 'Data Types'],
-            deliverable: 'A cleaned dataset plus a short before/after summary of every issue you fixed.', time: '2–3 hours', tip: 'Document every cleaning step you take — hiring managers love a transparent workflow.' },
-          { title: 'Weekly Revenue Pivot Report', short: 'Build a one-page pivot report that answers: which products and regions drive the most revenue each week?',
-            objective: 'Use formulas and Pivot Tables to summarise sales by product, region and week, then highlight the top 3 drivers.',
-            skills: ['Pivot Tables', 'SUMIF / AVERAGEIF', 'Sorting & Filtering'],
-            deliverable: 'A pivot report with at least 3 breakdowns and a 3-line insight summary.', time: '2 hours', tip: 'Add a small chart next to each pivot — it makes your findings 10x easier to scan.' },
-          { title: 'First Steps in SQL', short: 'A music-streaming database is waiting for you. Write your first SELECT, WHERE and ORDER BY queries to explore it.',
-            objective: 'Answer 8 business questions using only basic SQL — no joins needed yet.',
-            skills: ['SQL', 'SELECT / WHERE', 'ORDER BY', 'LIMIT'],
-            deliverable: 'A .sql file with 8 commented queries and the answer each one returns.', time: '2–4 hours', tip: 'Write the question as a comment above each query — it trains you to think in questions.' },
-          { title: 'One-Page Insight Dashboard', short: 'Turn a dull monthly report into a clean one-page dashboard with charts that tell a story at a glance.',
-            objective: 'Choose 4–5 key metrics and visualise them with the right chart types for a non-technical audience.',
-            skills: ['Charts', 'Dashboard Design', 'Storytelling with Data'],
-            deliverable: 'A one-page dashboard (Sheets, Excel or Power BI) with a 2-sentence takeaway.', time: '2–3 hours', tip: 'If a chart needs a paragraph to explain, replace it with a simpler one.' }
-        ],
-        intermediate: [
-          { title: 'Multi-Table Store Analysis', short: 'Customers, orders and products live in separate tables. Join them to answer questions no single table can.',
-            objective: 'Use INNER JOIN, GROUP BY and aggregates (COUNT, SUM, AVG) to analyse revenue per customer segment and per category.',
-            skills: ['SQL Joins', 'GROUP BY', 'Aggregates'],
-            deliverable: '5 analytical queries with a written summary of 3 surprising findings.', time: '3–4 hours', tip: 'Sketch the table relationships on paper before writing a single join.' },
-          { title: 'Web Traffic Funnel in Pandas', short: 'Analyse 10,000 rows of site events — find where users drop off between landing and signup.',
-            objective: 'Load event data with Pandas, clean timestamps, and compute conversion rates for each funnel stage.',
-            skills: ['Python', 'Pandas', 'Funnel Analysis', 'Datetime'],
-            deliverable: 'A Jupyter notebook with a funnel table and one recommendation to lift conversion.', time: '3–5 hours', tip: 'Group by session, not just user — it avoids double-counting steps.' },
-          { title: 'Executive Sales Dashboard', short: 'Build an interactive Power BI dashboard with slicers so a sales lead can self-serve their own answers.',
-            objective: 'Model the data, create 5+ visuals, and add slicers for region, product and month with drill-through.',
-            skills: ['Power BI', 'Data Modelling', 'DAX Basics', 'Interactivity'],
-            deliverable: 'A .pbix file plus a 1-minute screen recording walking through the dashboard.', time: '4–6 hours', tip: 'Design for the question, not the chart — list the 5 questions first.' },
-          { title: 'Lookup & Merge Gauntlet', short: 'Two related datasets with mismatched keys. Use VLOOKUP/XLOOKUP (or Pandas merges) to combine them without losing rows.',
-            objective: 'Match customers to orders using imperfect keys, handle mismatches gracefully and audit your match rate.',
-            skills: ['XLOOKUP', 'Data Merging', 'Data Quality Audits'],
-            deliverable: 'A merged dataset with a match-rate report and a list of unmatched records.', time: '2–3 hours', tip: 'Always count rows before and after a merge — silent row loss is the #1 analyst bug.' }
-        ],
-        advanced: [
-          { title: 'A/B Test: Did the Change Win?', short: 'A product team ran an A/B test on a new checkout flow. Analyse it and tell them, with evidence, whether to ship it.',
-            objective: 'Compute conversion rates per variant, run a significance test, check for sample-ratio mismatch and write a ship/no-ship recommendation.',
-            skills: ['Statistics', 'Hypothesis Testing', 'Python / Sheets'],
-            deliverable: 'A one-page analysis memo with the test result, confidence level and recommendation.', time: '4–6 hours', tip: 'Check segment-level results too — an overall win can hide a segment-level loss.' },
-          { title: 'Customer Churn Deep-Dive', short: 'A telecom dataset with churn flags. Find who churns, why, and what the company should do about it.',
-            objective: 'Perform an end-to-end analysis: EDA, cohort views, churn drivers, and 3 prioritised retention recommendations.',
-            skills: ['EDA', 'Cohort Analysis', 'Power BI / Python', 'Recommendations'],
-            deliverable: 'A full analysis notebook/report plus a stakeholder-ready summary slide.', time: '6–8 hours', tip: 'Quantify each recommendation — “save X customers worth $Y” beats “improve retention”.' },
-          { title: 'Capstone: Boardroom Insight Project', short: 'From raw data to boardroom: pick a dataset, own the whole pipeline, and defend your conclusions.',
-            objective: 'Deliver a complete analytics project — cleaning, analysis, dashboard and a persuasive written narrative with limitations.',
-            skills: ['End-to-End Pipeline', 'SQL + BI Tool', 'Executive Communication'],
-            deliverable: 'A portfolio-ready project: dataset, queries/notebook, dashboard and a 5-minute walkthrough.', time: '8–10 hours', tip: 'Record a short Loom walkthrough — it turns a static project into an interview asset.' }
-        ]
-      }
-    },
-    'web-development': {
-      label: 'Web Development', icon: '💻',
-      challenges: {
-        beginner: [
-          { title: 'Responsive Landing Page', short: 'Recreate a modern landing page from a screenshot using pure HTML and CSS — pixel-perfect and mobile-friendly.',
-            objective: 'Build a hero, features grid and footer with Flexbox/Grid, and make it responsive at 3 breakpoints with zero horizontal scroll.',
-            skills: ['HTML5', 'CSS3', 'Flexbox & Grid', 'Media Queries'],
-            deliverable: 'A single-page site hosted on GitHub Pages with a README and mobile screenshot.', time: '3–4 hours', tip: 'Build mobile-first, then layer on desktop styles — it saves hours of debugging.' },
-          { title: 'Programs Grid Experience', short: 'Build a card grid that presents learning programs with hover states and a clean visual hierarchy.',
-            objective: 'Create 6–8 program cards with images, tags and hover animations using only HTML/CSS.',
-            skills: ['CSS Grid', 'Hover States', 'Transitions'],
-            deliverable: 'A programs page with a consistent 3-column grid that collapses gracefully on mobile.', time: '2–3 hours', tip: 'Use CSS custom properties for colours so a theme change takes one line.' },
-          { title: 'Pricing Section Build', short: 'Code a pricing table with a highlighted “popular” plan, clean typography and accessible focus styles.',
-            objective: 'Build a 3-tier pricing section with a featured middle card, subtle shadows and visible focus indicators.',
-            skills: ['CSS Layout', 'Box Model', 'Typography', 'Accessibility'],
-            deliverable: 'A pricing section that passes a Lighthouse accessibility check with no contrast errors.', time: '2 hours', tip: 'Design the featured card first, then derive the others by removing emphasis.' },
-          { title: 'Personal Portfolio Hero', short: 'Craft the hero section of your own portfolio — your name, your pitch, and a call-to-action that pops.',
-            objective: 'Build a hero with a strong headline, gradient accent and CTA buttons using semantic HTML.',
-            skills: ['Semantic HTML', 'CSS Gradients', 'Button Styling'],
-            deliverable: 'A hero section deployed live with your real name and links.', time: '1–2 hours', tip: 'Your headline should say what you do for whom — not just your job title.' }
-        ],
-        intermediate: [
-          { title: 'Interactive Task Tracker', short: 'Make a static task list interactive: check tasks off, watch the progress bar move, and keep state after refresh.',
-            objective: 'Build a task list with checkboxes, a live progress percentage and localStorage persistence.',
-            skills: ['JavaScript', 'DOM Manipulation', 'localStorage', 'Events'],
-            deliverable: 'A tracker that saves progress on reload, with a reset button and smooth progress animation.', time: '3–4 hours', tip: 'Store tasks as an array of objects — it scales better than DOM scraping later.' },
-          { title: 'Registration Form with Live Validation', short: 'Build an intern registration form that validates as the user types and celebrates a clean submit.',
-            objective: 'Validate name, email, password strength and a WhatsApp-joined checkbox with inline error messages.',
-            skills: ['Forms', 'Regex', 'Validation UX', 'JavaScript'],
-            deliverable: 'A form with real-time validation, error states and a success screen on submit.', time: '3–5 hours', tip: 'Validate on blur, not on every keystroke — it feels helpful instead of aggressive.' },
-          { title: 'Live Search & Filter', short: 'Add a search bar and category filters to a list of 20+ items with instant, keyboard-friendly results.',
-            objective: 'Implement live search, multi-filter chips and an empty state, all without page reloads.',
-            skills: ['Array Methods', 'Event Handling', 'Filter Logic', 'UX States'],
-            deliverable: 'A filterable directory with a result count, clear-filters action and empty-state message.', time: '2–4 hours', tip: 'Debounce the input handler — 150ms feels instant and saves dozens of renders.' },
-          { title: 'Countdown to Graduation', short: 'Build a live countdown widget to Day 30 of the internship with animated digits and a celebration state.',
-            objective: 'Create a countdown timer to a target date with days/hours/minutes/seconds and a celebration at zero.',
-            skills: ['Date Objects', 'Timers', 'CSS Animations'],
-            deliverable: 'A reusable countdown component with a confetti moment when it hits zero.', time: '2–3 hours', tip: 'Compute the remaining time once per second from Date.now(), never by decrementing.' }
-        ],
-        advanced: [
-          { title: 'Intern Dashboard', short: 'A full dashboard: profile card, task progress ring, recent activity and submission status — all in one view.',
-            objective: 'Combine multiple components into a dashboard with a sidebar, stat cards and a progress ring fed by real state.',
-            skills: ['Component Thinking', 'State Management', 'CSS Grid', 'SVG'],
-            deliverable: 'A dashboard with 4+ widgets, responsive layout and data-driven progress visuals.', time: '6–8 hours', tip: 'Build each widget as an independent function that renders from a data object.' },
-          { title: 'Task Submission System', short: 'Let interns attach files, add notes and submit tasks — with a queue showing pending and reviewed submissions.',
-            objective: 'Build a submission flow with file input preview, notes field, local persistence and a status list.',
-            skills: ['File API', 'Form Handling', 'State & Persistence', 'Lists UI'],
-            deliverable: 'A working submission system with draft autosave and a review-status queue.', time: '5–7 hours', tip: 'Show file size and type before upload — it prevents 90% of user confusion.' },
-          { title: 'Offline-First Notes App', short: 'A notes app that works with no internet: create, edit, delete, search — and everything survives a refresh.',
-            objective: 'Build a CRUD notes app with localStorage persistence, search, pinning and character-safe rendering.',
-            skills: ['CRUD', 'XSS-Safe Rendering', 'localStorage', 'Search'],
-            deliverable: 'A notes app with pin/search/delete and zero data loss on refresh.', time: '5–6 hours', tip: 'Never use innerHTML with user text — use textContent and sleep well at night.' },
-          { title: 'Capstone: Full Platform Assembly', short: 'The final boss: wire your homepage, programs, tracker, registration and dashboard into one seamless platform.',
-            objective: 'Integrate all previously built components with shared navigation, consistent state and a unified visual system.',
-            skills: ['Architecture', 'Routing', 'Shared State', 'Polish'],
-            deliverable: 'A complete TechBridge-style platform, deployed live and demo-ready for your portfolio.', time: '8–12 hours', tip: 'Define your colour tokens and spacing scale first — consistency is what makes it feel “real”.' }
-        ]
-      }
+  /* ================= SPA page router ================= */
+  var pages = document.querySelectorAll('.page');
+  var navLinks = document.getElementById('navLinks');
+  var hamburger = document.getElementById('hamburger');
+
+  function setActiveNav(page) {
+    document.querySelectorAll('.nav-link[data-page]').forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('data-page') === page);
+    });
+  }
+
+  function showPage(page, skipHash) {
+    var target = document.getElementById('page-' + page);
+    if (!target) page = 'home', target = document.getElementById('page-home');
+    pages.forEach(function (p) { p.classList.remove('active'); });
+    target.classList.add('active');
+    setActiveNav(page);
+    if (!skipHash) history.replaceState(null, '', '#' + page);
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    closeMenu();
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('[data-page]');
+    if (!link) return;
+    if (link.closest('.dropdown-menu')) return; // handled by track deep-link below
+    e.preventDefault();
+    showPage(link.getAttribute('data-page'));
+    // program sub-links
+    var prog = link.getAttribute('data-program');
+    if (prog) location.hash = '#program/' + prog;
+  });
+
+  /* Program dropdown deep-links */
+  document.querySelectorAll('.dropdown-menu a[data-program]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showPage('program');
+      location.hash = '#program/' + a.getAttribute('data-program');
+      closeMenu();
+    });
+  });
+
+  /* Hamburger */
+  hamburger.addEventListener('click', function () {
+    var open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  /* Mobile: Program dropdown toggle (tap) */
+  var dropToggle = document.querySelector('.drop-toggle');
+  dropToggle.addEventListener('click', function (e) {
+    if (window.innerWidth < 900) {
+      e.preventDefault();
+      document.getElementById('programDropdown').classList.toggle('open');
     }
-  };
-
-  var LEVELS = ['beginner', 'intermediate', 'advanced'];
-  var LEVEL_LABEL = { beginner: ' Beginner', intermediate: ' Intermediate', advanced: ' Advanced' };
-
-  var fab = document.getElementById('chFab');
-  var modal = document.getElementById('chModal');
-  var intro = document.getElementById('chIntro');
-  var trackView = document.getElementById('chTrackView');
-  var cardsWrap = document.getElementById('chCards');
-  var diffPills = document.getElementById('chDiffPills');
-
-  var state = { program: null, picked: {}, expanded: {}, activeDiff: 'beginner' };
-
-  /* ---------- modal open/close ---------- */
-  function openModal() { modal.hidden = false; document.body.style.overflow = 'hidden'; }
-  function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
-  fab.addEventListener('click', openModal);
-  document.getElementById('chClose').addEventListener('click', closeModal);
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
-
-  /* ---------- show fab only on homepage ---------- */
-  function syncFab() {
-    var h = location.hash;
-    fab.style.display = (h === '' || h === '#home') ? '' : 'none';
-  }
-  window.addEventListener('hashchange', syncFab);
-  syncFab();
-
-  /* ---------- helpers ---------- */
-  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-
-  function pickRandom(level) {
-    var pool = CH_TRACKS[state.program].challenges[level];
-    var current = state.picked[state.program] ? state.picked[state.program][level] : -1;
-    if (pool.length <= 1) return 0;
-    var idx;
-    do { idx = Math.floor(Math.random() * pool.length); } while (idx === current);
-    return idx;
-  }
-
-  /* ---------- rendering ---------- */
-  function renderCards() {
-    var track = CH_TRACKS[state.program];
-    cardsWrap.innerHTML = LEVELS.map(function (level, i) {
-      var c = track.challenges[level][state.picked[state.program][level]];
-      var open = !!state.expanded[state.program + ':' + level];
-      return '' +
-      '<div class="ch-card" data-level="' + level + '" style="animation-delay:' + (i * 0.06) + 's">' +
-        '<div class="ch-card-top">' +
-          '<span class="ch-level ch-lv-' + level + '">' + LEVEL_LABEL[level] + '</span>' +
-          '<button class="ch-icon-btn ch-refresh" type="button" data-level="' + level + '" title="Refresh challenge — new one, same level" aria-label="Refresh ' + level + ' challenge">↻</button>' +
-        '</div>' +
-        '<h4>' + esc(c.title) + '</h4>' +
-        '<p class="ch-desc">' + esc(c.short) + '</p>' +
-        '<div class="ch-details" id="ch-details-' + level + '"' + (open ? '' : ' hidden') + '>' +
-          '<div class="ch-dt-row"><span class="ch-dt-label">Objective</span><p class="ch-dt-text">' + esc(c.objective) + '</p></div>' +
-          '<div class="ch-dt-row"><span class="ch-dt-label">Skills Practised</span><div class="ch-skill-chips">' +
-            c.skills.map(function (s) { return '<span class="ch-skill-chip">' + esc(s) + '</span>'; }).join('') +
-          '</div></div>' +
-          '<div class="ch-dt-row"><span class="ch-dt-label">Deliverable</span><p class="ch-dt-text">' + esc(c.deliverable) + '</p></div>' +
-          '<div class="ch-dt-row"><span class="ch-dt-label">Estimated Time</span><p class="ch-dt-text">⏱️ ' + esc(c.time) + '</p></div>' +
-          '<p class="ch-tip">💡 ' + esc(c.tip) + '</p>' +
-        '</div>' +
-        '<div class="ch-card-foot">' +
-          '<button class="ch-view-btn' + (open ? ' open' : '') + '" type="button" data-level="' + level + '">' +
-            (open ? 'Show Less −' : 'View More Info +') +
-          '</button>' +
-        '</div>' +
-      '</div>';
-    }).join('');
-
-    cardsWrap.querySelectorAll('.ch-refresh').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var level = btn.getAttribute('data-level');
-        state.picked[state.program][level] = pickRandom(level);
-        btn.classList.add('ch-spin');
-        renderCards();
-      });
-    });
-    cardsWrap.querySelectorAll('.ch-view-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var level = btn.getAttribute('data-level');
-        var key = state.program + ':' + level;
-        state.expanded[key] = !state.expanded[key];
-        var det = document.getElementById('ch-details-' + level);
-        det.hidden = !state.expanded[key];
-        btn.classList.toggle('open', state.expanded[key]);
-        btn.textContent = state.expanded[key] ? 'Show Less −' : 'View More Info +';
-      });
-    });
-  }
-
-  function selectTrack(program) {
-    state.program = program;
-    if (!state.picked[program]) {
-      state.picked[program] = { beginner: 0, intermediate: 0, advanced: 0 };
-      LEVELS.forEach(function (l) { state.picked[program][l] = pickRandom(l); });
-    }
-    intro.hidden = true;
-    trackView.hidden = false;
-    renderCards();
-  }
-
-  /* ---------- intro: choose track buttons ---------- */
-  document.querySelectorAll('[data-chtrack]').forEach(function (btn) {
-    btn.addEventListener('click', function () { selectTrack(btn.getAttribute('data-chtrack')); });
   });
 
-  /* ---------- change program ---------- */
-  document.getElementById('chChangeProgram').addEventListener('click', function () {
-    state.program = null;
-    trackView.hidden = true;
-    intro.hidden = false;
-  });
+  /* Route on load */
+  function routeFromHash() {
+    var h = location.hash.replace('#', '');
+    if (h.indexOf('program/') === 0) { showPage('program', true); return; }
+    var valid = ['home', 'about', 'program', 'admission', 'apply'];
+    showPage(valid.indexOf(h) !== -1 ? h : 'home', true);
+  }
+  window.addEventListener('hashchange', routeFromHash);
+  routeFromHash();
 
-  /* ---------- change difficulty ---------- */
-  diffPills.querySelectorAll('.ch-pill').forEach(function (pill) {
-    pill.addEventListener('click', function () {
-      diffPills.querySelectorAll('.ch-pill').forEach(function (p) { p.classList.remove('active'); });
-      pill.classList.add('active');
-      state.activeDiff = pill.getAttribute('data-chdiff');
-      var card = cardsWrap.querySelector('.ch-card[data-level="' + state.activeDiff + '"]');
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        card.classList.remove('ch-flash');
-        void card.offsetWidth;
-        card.classList.add('ch-flash');
+  /* ================= Apply form: file label + submit ================= */
+  var fileInput = document.getElementById('applicationFile');
+  var fileText = document.getElementById('fileDropText');
+  if (fileInput) {
+    fileInput.addEventListener('change', function () {
+      if (fileInput.files.length) {
+        var f = fileInput.files[0];
+        fileText.innerHTML = '<strong>' + f.name + '</strong><small>' +
+          (f.size / 1024 / 1024).toFixed(2) + ' MB — tap to replace</small>';
       }
     });
-  });
+  }
+  var applyForm = document.getElementById('applyForm');
+  if (applyForm) {
+    applyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!fileInput.files.length) {
+        document.getElementById('fileError').hidden = false;
+        return;
+      }
+      document.getElementById('fileError').hidden = true;
+      try {
+        localStorage.setItem('techbridge-application', JSON.stringify({
+          name: document.getElementById('applicantName').value.trim(),
+          email: document.getElementById('applicantEmail').value.trim(),
+          file: fileInput.files[0].name,
+          at: Date.now()
+        }));
+      } catch (err) {}
+      applyForm.hidden = true;
+      document.getElementById('applySuccess').hidden = false;
+    });
+  }
 })();
 </script>
 
-<style>
-/* Homepage opens by default: only the active page is shown */
-main .page { display: none; }
-main .page.active { display: block; }
-</style>
-
-<script src="script.js"></script>
-<script>
-// Always open on the homepage when the site loads
-(function () {
-  function activateHome() {
-    document.querySelectorAll('main .page').forEach(function (p) { p.classList.remove('active'); });
-    var home = document.getElementById('page-home');
-    if (home) home.classList.add('active');
-    document.querySelectorAll('.nav-link').forEach(function (l) {
-      l.classList.toggle('active', l.getAttribute('data-page') === 'home');
-    });
-  }
-  function ensureHomeLanding() {
-    if (!location.hash || location.hash === '#' || location.hash === '#home') {
-      activateHome();
-      if (location.hash !== '#home') history.replaceState(null, '', '#home');
-    }
-  }
-  window.addEventListener('DOMContentLoaded', ensureHomeLanding);
-  window.addEventListener('load', ensureHomeLanding);
-})();
-</script>
 </body>
 </html>
