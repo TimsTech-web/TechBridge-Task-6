@@ -70,6 +70,7 @@
         <div class="hero-cta">
           <a href="#apply" class="btn-primary" data-page="apply">Apply Now</a>
           <a href="#program" class="btn-ghost" data-page="program">Explore Programmes</a>
+          <a href="dashboard.html#hub" class="btn-challenge" target="_self">⚡ Challenge Hub</a>
         </div>
         <div class="hero-stats">
           <div><strong>100+</strong><span>Graduates</span></div>
@@ -837,7 +838,7 @@ h1,h2,h3,h4 { line-height: 1.25; }
 @keyframes pgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
 /* Buttons */
-.btn-primary, .btn-ghost, .btn-wa {
+.btn-primary, .btn-ghost, .btn-wa, .btn-challenge {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-weight: 800; font-size: .95rem; padding: 14px 28px; border-radius: 999px;
   text-decoration: none; cursor: pointer; border: 0; transition: transform .15s, box-shadow .15s;
@@ -845,8 +846,9 @@ h1,h2,h3,h4 { line-height: 1.25; }
 .btn-primary { background: linear-gradient(120deg,#0284c7,#0ea5e9); color: #fff; box-shadow: 0 10px 24px rgba(14,165,233,.4); }
 .btn-ghost { background: transparent; color: var(--ink); border: 2px solid #cbd5e1; }
 .btn-wa { background: linear-gradient(120deg,#16a34a,#22c55e); color: #fff; box-shadow: 0 10px 24px rgba(34,197,94,.4); }
+.btn-challenge { background: linear-gradient(120deg,#7c3aed,#a855f7); color: #fff; box-shadow: 0 10px 24px rgba(139,92,246,.42); }
 .btn-block { width: 100%; }
-.btn-primary:hover, .btn-wa:hover { transform: translateY(-2px); }
+.btn-primary:hover, .btn-wa:hover, .btn-challenge:hover { transform: translateY(-2px); }
 .btn-apply {
   background: linear-gradient(120deg,#f59e0b,#fbbf24); color: #1e293b !important;
   font-weight: 800; font-size: .85rem; padding: 10px 20px; border-radius: 999px;
