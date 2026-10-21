@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TechBridge Services — 30DAYS INTERNSHIP TRAINING</title>
 <link rel="icon" type="image/png" href="logo.png">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="styles.css">
+<base target="_blank">
 </head>
 <body>
 
@@ -261,7 +262,27 @@ window.addEventListener('load', function() {
   </div>
 
 
-  <!-- ================= COHORT NEWS BANNER ================= -->
+  
+
+  <div class="container features">
+    <div class="feature-card">
+      <div class="f-icon"><img src="rt-icon-rocket.png" alt=""></div>
+      <h3>Hands-On Projects</h3>
+      <p>Build a real portfolio with projects reviewed by industry mentors every week.</p>
+    </div>
+    <div class="feature-card">
+      <div class="f-icon"><img src="rt-icon-mentor.png" alt=""></div>
+      <h3>Expert Mentorship</h3>
+      <p>Learn directly from senior developers and data analysts working in the industry.</p>
+    </div>
+    <div class="feature-card">
+      <div class="f-icon"><img src="rt-icon-growth.png" alt=""></div>
+      <h3>Career Support</h3>
+      <p>CV clinics, mock interviews and direct referrals to hiring partner companies.</p>
+    </div>
+  </div>
+
+<!-- ================= COHORT NEWS BANNER ================= -->
   <div class="tb2-news-wrap">
     <div class="container">
       <div class="tb2-news">
@@ -280,26 +301,11 @@ window.addEventListener('load', function() {
             <span>View Details</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
+          <button class="tb2-news-close" id="tbDismissBanner" type="button" aria-label="Dismiss live cohort banner" title="Dismiss">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="container features">
-    <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-rocket.png" alt=""></div>
-      <h3>Hands-On Projects</h3>
-      <p>Build a real portfolio with projects reviewed by industry mentors every week.</p>
-    </div>
-    <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-mentor.png" alt=""></div>
-      <h3>Expert Mentorship</h3>
-      <p>Learn directly from senior developers and data analysts working in the industry.</p>
-    </div>
-    <div class="feature-card">
-      <div class="f-icon"><img src="rt-icon-growth.png" alt=""></div>
-      <h3>Career Support</h3>
-      <p>CV clinics, mock interviews and direct referrals to hiring partner companies.</p>
     </div>
   </div>
 </section>
@@ -1112,6 +1118,13 @@ window.addEventListener('load', function() {
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .tb2-news-btn svg { transition: transform .18s ease; }
+.tb2-news-close {
+  flex: none; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.1); color: #dbeafe;
+  display: inline-flex; align-items: center; justify-content: center; transition: all .18s ease;
+}
+.tb2-news-close:hover { background: rgba(248,113,113,.25); border-color: rgba(252,165,165,.6); color: #fecaca; transform: rotate(90deg); }
+.tb2-news-wrap.tb2-dismissed { display: none; }
 .tb2-news-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(245, 158, 11, .5); }
 .tb2-news-btn:hover svg { transform: translateX(4px); }
 
@@ -1547,6 +1560,17 @@ window.addEventListener('load', function() {
 (function () {
   var modal = document.getElementById('tbModal');
   var seg = modal.querySelector('.tb2-seg');
+  var bannerWrap = document.querySelector('.tb2-news-wrap');
+  if (localStorage.getItem('tb2_banner_dismissed') === '1' && bannerWrap) {
+    bannerWrap.classList.add('tb2-dismissed');
+  }
+  var dismissBtn = document.getElementById('tbDismissBanner');
+  if (dismissBtn && bannerWrap) {
+    dismissBtn.addEventListener('click', function () {
+      bannerWrap.classList.add('tb2-dismissed');
+      localStorage.setItem('tb2_banner_dismissed', '1');
+    });
+  }
   document.getElementById('tb-open-details').addEventListener('click', function () {
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
