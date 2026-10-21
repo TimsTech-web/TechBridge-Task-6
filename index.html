@@ -262,9 +262,7 @@ window.addEventListener('load', function() {
   </div>
 
 
-  
-
-  <div class="container features">
+<div class="container features">
     <div class="feature-card">
       <div class="f-icon"><img src="rt-icon-rocket.png" alt=""></div>
       <h3>Hands-On Projects</h3>
@@ -279,33 +277,6 @@ window.addEventListener('load', function() {
       <div class="f-icon"><img src="rt-icon-growth.png" alt=""></div>
       <h3>Career Support</h3>
       <p>CV clinics, mock interviews and direct referrals to hiring partner companies.</p>
-    </div>
-  </div>
-
-<!-- ================= COHORT NEWS BANNER ================= -->
-  <div class="tb2-news-wrap">
-    <div class="container">
-      <div class="tb2-news">
-        <div class="tb2-news-shine" aria-hidden="true"></div>
-        <div class="tb2-news-left">
-          <span class="tb2-live-ring"><span class="tb2-live-dot"></span></span>
-          <div class="tb2-news-copy">
-            <span class="tb2-news-kicker">Live Cohort Update</span>
-            <h3 class="tb2-news-title">October 2026 Cohort is <span class="tb2-title-accent">LIVE</span> — Day 10 of 30 ongoing</h3>
-            <p class="tb2-news-sub">Trainees are currently on Task 5 of 8 · Full task-by-task breakdown inside</p>
-          </div>
-        </div>
-        <div class="tb2-news-right">
-          <div class="tb2-day-pill"><strong>DAY 10</strong><em>of 30</em></div>
-          <button class="tb2-news-btn" id="tb-open-details" type="button">
-            <span>View Details</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-          <button class="tb2-news-close" id="tbDismissBanner" type="button" aria-label="Dismiss live cohort banner" title="Dismiss">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -683,451 +654,8 @@ window.addEventListener('load', function() {
   </div>
 </div>
 
-<!-- ================= COHORT DETAILS MODAL ================= -->
-<div class="tb2-overlay" id="tbModal" hidden>
-  <div class="tb2-modal" role="dialog" aria-modal="true" aria-labelledby="tbModalTitle">
-
-    <div class="tb2-hero">
-      <div class="tb2-hero-bg" aria-hidden="true"></div>
-      <button class="tb2-close" id="tbCloseModal" type="button" aria-label="Close">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-      <div class="tb2-hero-grid">
-        <div class="tb2-hero-copy">
-          <span class="tb2-live-chip"><span class="tb2-live-dot"></span> LIVE · OCTOBER 2026 COHORT</span>
-          <h3 id="tbModalTitle">Cohort Progress Tracker</h3>
-          <p>Live task-by-task breakdown for both tracks — updated as the cohort advances.</p>
-          <div class="tb2-hero-stats">
-            <div class="tb2-hstat"><strong>33%</strong><span>Complete</span></div>
-            <div class="tb2-hstat tb2-hstat-mid"><strong>5<span class="tb2-hstat-slash">/</span>6</strong><span>Intermediate tasks</span></div>
-            <div class="tb2-hstat"><strong>8</strong><span>Total tasks</span></div>
-          </div>
-        </div>
-        <div class="tb2-ring-wrap" aria-label="Day 10 of 30">
-          <svg class="tb2-ring" width="120" height="120" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="52" class="tb2-ring-track"/>
-            <circle cx="60" cy="60" r="52" class="tb2-ring-fill"/>
-          </svg>
-          <div class="tb2-ring-label"><strong>16</strong><span>DAY</span><em>of 30</em></div>
-        </div>
-      </div>
-      <div class="tb2-day-bar"><div class="tb2-day-fill"></div></div>
-      <div class="tb2-day-ticks"><span>Day 1</span><span class="tb2-today">▲ Today · Day 16</span><span>Day 30 · Graduation</span></div>
-    </div>
-
-    <div class="tb2-modal-body">
-      <div class="tb2-summary">
-        <div class="tb2-chip tb2-chip-done"><span class="tb2-chip-num">✔</span><div><strong>Tasks 1–2 · Completed</strong><span>Days 1–6 — foundations laid</span></div></div>
-        <div class="tb2-chip tb2-chip-progress"><span class="tb2-chip-num tb2-chip-pulse"></span><div><strong>Task 3 · In Progress</strong><span>Days 7–10 — happening now</span></div></div>
-        <div class="tb2-chip tb2-chip-upcoming"><span class="tb2-chip-num">○</span><div><strong>Tasks 4–8 · Upcoming</strong><span>Days 11–30 — intermediate → advanced</span></div></div>
-      </div>
-
-      <div class="tb2-seg" role="tablist">
-        <span class="tb2-seg-glider" aria-hidden="true"></span>
-        <button class="tb2-seg-btn active" data-tbtrack="da" role="tab" type="button">📊 Data Analytics</button>
-        <button class="tb2-seg-btn" data-tbtrack="wd" role="tab" type="button">💻 Web Development</button>
-      </div>
-
-      <div class="tb2-panel" id="tbTrack-da">
-        <div class="tb2-task tb2-done">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-done">1</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Data Cleaning Basics</h4>
-              <span class="tb2-days">Days 1–3</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Clean a messy dataset using Google Sheets Excel. Identify and fix duplicate rows, blank cells, inconsistent formatting, and incorrect data type.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-done">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-done">2</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Formulas & Pivot Tables</h4>
-              <span class="tb2-days">Days 4–7</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use spreadsheet formulas and Pivot Tables to answer questions and extract useful insights from a dataset.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-progress">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-progress">3</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Data Visualization</h4>
-              <span class="tb2-days">Days 8–10</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-progress"><span class="tb2-mini-dot"></span> In Progress · Day 10</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Create charts and a simple dashboard that communicate useful insights from a dataset.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">4</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Introduction to SQL</h4>
-              <span class="tb2-days">Days 11–14</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Practice basic SQL queries and use them to answer real-world questions about data.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">5</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>SQL Joins & Aggregations</h4>
-              <span class="tb2-days">Days 15–18</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use JOIN, GROUP BY and aggregate functions such as COUNT, SUM and AVG to analyze information across multiple tables.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">6</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Lookup Functions & Data Wrangling</h4>
-              <span class="tb2-days">Days 19–21</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Use VLOOKUP or XLOOKUP to combine related datasets and handle data mismatches.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">7</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Mini Analysis Project</h4>
-              <span class="tb2-days">Days 22–25</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-advanced">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Complete a small end-to-end analysis involving data cleaning formulas, Pivot Tables, Charts and recommendations.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">8</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Capstone Project</h4>
-              <span class="tb2-days">Days 26–30</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-advanced">Advanced</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-da">📊 Data Analyst</span><p>Complete a larger project combining spreadsheet analysis and SQL using at least two related tables.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tb2-panel" id="tbTrack-wd" hidden>
-        <div class="tb2-task tb2-done">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-done">1</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the TechBridge Homepage</h4>
-              <span class="tb2-days">Days 1–3</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create the first version of the TechBridge website using HTML and CSS.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-done">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-done">2</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the TechBridge Programs Experience</h4>
-              <span class="tb2-days">Days 4–7</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg> Completed</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a Programs experience that presents TechBridge's available learning programs.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-progress">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-progress">3</span>
-            <span class="tb2-line tb2-line-done"></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the Internship Tasks Experience</h4>
-              <span class="tb2-days">Days 8–10</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-beginner">Beginner</span>
-              <span class="tb2-status tb2-st-progress"><span class="tb2-mini-dot"></span> In Progress · Day 10</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">4</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build an Interactive Task Tracker</h4>
-              <span class="tb2-days">Days 11–14</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Use Javascript to make the internship task experience interactive and allow progress to be tracked.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">5</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the Intern Registration Experience</h4>
-              <span class="tb2-days">Days 15–18</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a professional registration/onboarding interface for TechBridge interns.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">6</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the Task SUbmission System</h4>
-              <span class="tb2-days">Days 19–21</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-intermediate">Intermediate</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create an interface through which interns can prepare and submit their task work.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">7</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the intern Dashboard</h4>
-              <span class="tb2-days">Days 22–25</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-advanced">Advanced</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Create a dashboard where an intern can view their profile, progress, tasks, and submissions.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="tb2-task tb2-upcoming">
-          <div class="tb2-timeline">
-            <span class="tb2-node tb2-node-upcoming">8</span>
-            <span class="tb2-line "></span>
-          </div>
-          <div class="tb2-task-body">
-            <div class="tb2-task-top">
-              <h4>Build the complete TechBridge Internship Platform</h4>
-              <span class="tb2-days">Days 26–30</span>
-            </div>
-            <div class="tb2-task-tags">
-              <span class="tb2-level tb2-lv-advanced">Advanced</span>
-              <span class="tb2-status tb2-st-upcoming">Upcoming</span>
-            </div>
-            <div class="tb2-impact">
-              <div class="tb2-impact-row"><span class="tb2-role tb2-role-wd">💻 Web Developer</span><p>Combine the different components created during the internship into a complete TechBridge platform.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tb2-ladder">
-        <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg> Skill Progression — Beginner to Advanced</h4>
-        <div class="tb2-ladder-steps">
-          <div class="tb2-step tb2-step-active">
-            <span class="tb2-step-check">✔</span>
-            <strong>Beginner</strong><em>Tasks 1–3</em>
-            <p>>Build the TechBridge Homepage</p>
-          </div>
-          <div class="tb2-step-arrow" aria-hidden="true">➜</div>
-          <div class="tb2-step">
-            <span class="tb2-step-num">2</span>
-            <strong>Intermediate</strong><em>Tasks 4–6</em>
-            <p>Build an Interactive Task Tracker.</p>
-          </div>
-          <div class="tb2-step-arrow" aria-hidden="true">➜</div>
-          <div class="tb2-step tb2-step-final">
-            <span class="tb2-step-num">3</span>
-            <strong>Advanced</strong><em>Tasks 7–8</em>
-            <p>Build the intern Dashboard.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
 /* ============ TechBridge cohort banner & modal (v2 aesthetic) ============ */
-.tb2-news-wrap { margin: -0.5rem 0 2.5rem; }
-.tb2-news {
-  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between;
-  gap: 18px; flex-wrap: wrap; border-radius: 18px; padding: 20px 24px;
-  background: linear-gradient(120deg, #0b1f3f 0%, #123c6e 55%, #0e5e8f 100%);
-  border: 1px solid rgba(125, 200, 255, .25);
-  box-shadow: 0 14px 40px rgba(6, 30, 60, .35), inset 0 1px 0 rgba(255,255,255,.08);
-}
-.tb2-news-shine {
-  position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,.09), transparent);
-  animation: tb2-shine 5.5s ease-in-out infinite; pointer-events: none;
-}
-@keyframes tb2-shine { 0%,55% { left: -60%; } 100% { left: 130%; } }
-.tb2-news-left { display: flex; align-items: center; gap: 16px; flex: 1 1 420px; }
-.tb2-live-ring {
-  flex: none; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  background: rgba(34, 197, 94, .14); border: 1px solid rgba(34, 197, 94, .4);
-}
-.tb2-live-dot {
-  width: 12px; height: 12px; border-radius: 50%; background: #22c55e; position: relative;
-}
-.tb2-live-dot::after {
-  content: ""; position: absolute; inset: -5px; border-radius: 50%;
-  border: 2px solid rgba(34,197,94,.55); animation: tb2-pulse 1.6s ease-out infinite;
-}
-@keyframes tb2-pulse { 0% { transform: scale(.55); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
-.tb2-news-kicker {
-  font-size: .66rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;
-  color: #7dd3fc;
-}
-.tb2-news-title { margin: 3px 0 3px; color: #fff; font-size: 1.18rem; line-height: 1.3; }
-.tb2-title-accent {
-  background: linear-gradient(90deg, #4ade80, #a3e635); -webkit-background-clip: text; background-clip: text;
-  color: transparent; font-weight: 800;
-}
-.tb2-news-sub { margin: 0; color: rgba(203, 225, 245, .8); font-size: .85rem; }
-.tb2-news-right { display: flex; align-items: center; gap: 14px; }
-.tb2-day-pill {
-  display: flex; flex-direction: column; align-items: center; line-height: 1.05;
-  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
-  border-radius: 14px; padding: 8px 16px; color: #fff;
-}
-.tb2-day-pill strong { font-size: 1.05rem; letter-spacing: .04em; }
-.tb2-day-pill em { font-style: normal; font-size: .68rem; color: #93c5fd; text-transform: uppercase; letter-spacing: .1em; }
-.tb2-news-btn {
-  display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer;
-  background: linear-gradient(120deg, #fbbf24, #f59e0b); color: #1e293b;
-  font-weight: 800; font-size: .9rem; padding: 13px 22px; border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(245, 158, 11, .4);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.tb2-news-btn svg { transition: transform .18s ease; }
-.tb2-news-close {
-  flex: none; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
-  border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.1); color: #dbeafe;
-  display: inline-flex; align-items: center; justify-content: center; transition: all .18s ease;
-}
-.tb2-news-close:hover { background: rgba(248,113,113,.25); border-color: rgba(252,165,165,.6); color: #fecaca; transform: rotate(90deg); }
-.tb2-news-wrap.tb2-dismissed { display: none; }
-.tb2-news-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(245, 158, 11, .5); }
-.tb2-news-btn:hover svg { transform: translateX(4px); }
-
 /* ---------- modal ---------- */
 .tb2-overlay {
   position: fixed; inset: 0; z-index: 99999; padding: 3vh 14px; overflow-y: auto;
@@ -1315,8 +843,6 @@ window.addEventListener('load', function() {
   .tb2-step-arrow { transform: rotate(90deg); }
   .tb2-modal-body { padding: 18px 16px 22px; }
   .tb2-hero { padding: 22px 18px 18px; }
-  .tb2-news { padding: 18px; }
-  .tb2-news-right { width: 100%; justify-content: space-between; }
 }
 
 /* ============ Navbar news headline ticker (visible on all pages) ============ */
@@ -1558,43 +1084,9 @@ window.addEventListener('load', function() {
 
 <script>
 (function () {
-  var modal = document.getElementById('tbModal');
-  var seg = modal.querySelector('.tb2-seg');
-  var bannerWrap = document.querySelector('.tb2-news-wrap');
-  if (localStorage.getItem('tb2_banner_dismissed') === '1' && bannerWrap) {
-    bannerWrap.classList.add('tb2-dismissed');
-  }
-  var dismissBtn = document.getElementById('tbDismissBanner');
-  if (dismissBtn && bannerWrap) {
-    dismissBtn.addEventListener('click', function () {
-      bannerWrap.classList.add('tb2-dismissed');
-      localStorage.setItem('tb2_banner_dismissed', '1');
-    });
-  }
-  document.getElementById('tb-open-details').addEventListener('click', function () {
-    modal.hidden = false;
-    document.body.style.overflow = 'hidden';
-  });
-  function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
-  document.getElementById('tbCloseModal').addEventListener('click', closeModal);
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
-
   // Seamless marquee: duplicate ticker items so translateX(-50%) loops cleanly
   var track = document.getElementById('navNewsTrack');
   if (track) { track.innerHTML += track.innerHTML; }
-
-  var btns = seg.querySelectorAll('.tb2-seg-btn');
-  btns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      btns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var isWD = btn.dataset.tbtrack === 'wd';
-      seg.classList.toggle('wd', isWD);
-      document.getElementById('tbTrack-da').hidden = isWD;
-      document.getElementById('tbTrack-wd').hidden = !isWD;
-    });
-  });
 })();
 </script>
 
@@ -2359,6 +1851,33 @@ window.addEventListener('load', function() {
 })();
 </script>
 
+<style>
+/* Homepage opens by default: only the active page is shown */
+main .page { display: none; }
+main .page.active { display: block; }
+</style>
+
 <script src="script.js"></script>
+<script>
+// Always open on the homepage when the site loads
+(function () {
+  function activateHome() {
+    document.querySelectorAll('main .page').forEach(function (p) { p.classList.remove('active'); });
+    var home = document.getElementById('page-home');
+    if (home) home.classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(function (l) {
+      l.classList.toggle('active', l.getAttribute('data-page') === 'home');
+    });
+  }
+  function ensureHomeLanding() {
+    if (!location.hash || location.hash === '#' || location.hash === '#home') {
+      activateHome();
+      if (location.hash !== '#home') history.replaceState(null, '', '#home');
+    }
+  }
+  window.addEventListener('DOMContentLoaded', ensureHomeLanding);
+  window.addEventListener('load', ensureHomeLanding);
+})();
+</script>
 </body>
 </html>
