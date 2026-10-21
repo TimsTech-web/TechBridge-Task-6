@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="logo.png">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -859,7 +860,7 @@ h1,h2,h3,h4 { line-height: 1.25; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px; }
 .brand { flex: none; display: flex; align-items: center; text-decoration: none; }
-.brand-logo { height: 38px; width: auto; display: block; }
+.brand-logo { height: 54px; width: auto; display: block; }
 
 .nav-links {
   position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
@@ -902,11 +903,16 @@ h1,h2,h3,h4 { line-height: 1.25; }
 /* ============ HERO ============ */
 .hero { background: linear-gradient(140deg, #0b1f3f 0%, #134b7c 60%, #0e628e 100%); color: #fff; padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
 .hero::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: radial-gradient(circle at 85% 15%, rgba(56,189,248,.3), transparent 45%),
               radial-gradient(circle at 10% 90%, rgba(34,197,94,.2), transparent 40%);
 }
-.hero-grid { position: relative; }
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url("hero-interns.png") center / cover no-repeat;
+  opacity: .16; filter: saturate(1.15);
+}
+.hero-grid { position: relative; z-index: 1; }
 .hero-text h1 { font-size: clamp(1.9rem, 6vw, 3.2rem); margin: 1rem 0; }
 .grad { background: linear-gradient(90deg,#38bdf8,#4ade80); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-text > p { color: rgba(219,234,254,.9); max-width: 560px; font-size: clamp(.95rem, 2.5vw, 1.08rem); }
@@ -1001,7 +1007,7 @@ h1,h2,h3,h4 { line-height: 1.25; }
 .footer-grid a { display: block; color: #93c5fd; text-decoration: none; font-size: .86rem; padding: 4px 0; }
 .footer-grid p { font-size: .86rem; color: #94a3b8; margin: 10px 0 0; }
 .footer-logo-chip { display: inline-flex; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 8px 12px; }
-.footer-logo { height: 30px; }
+.footer-logo { height: 42px; }
 .footer-connect-list { display: flex; gap: 10px; }
 .footer-social-link {
   width: 40px !important; height: 40px; border-radius: 12px !important; padding: 0 !important;
@@ -1957,6 +1963,13 @@ h1,h2,h3,h4 { line-height: 1.25; }
   background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 9px 12px;
 }
 .tb-login-error[hidden] { display: none; }
+.tb-login-home {
+  display: inline-flex; align-items: center; gap: 7px; margin: 0 0 16px;
+  color: #0369a1; background: #fff; border: 1px solid #cfe0ef; border-radius: 999px;
+  font-size: .78rem; font-weight: 800; padding: 8px 14px; text-decoration: none;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.tb-login-home:hover { background: #f0f9ff; border-color: #7dd3fc; transform: translateX(-2px); }
 .tb-login-foot { margin: 14px 0 0; text-align: center; font-size: .74rem; color: #7a8ca3; }
 </style>
 
@@ -1971,6 +1984,7 @@ h1,h2,h3,h4 { line-height: 1.25; }
       <p>Enter your details to open your personal internship dashboard.</p>
     </div>
     <div class="tb-login-body">
+      <a href="#home" class="tb-login-home" id="tbLoginHome" data-page="home">← Back to Home</a>
       <p class="tb-login-error" id="tbLoginError" hidden>Please fill in every field correctly.</p>
       <form id="tbLoginForm" novalidate>
         <div class="tb-login-field">
@@ -2009,6 +2023,7 @@ h1,h2,h3,h4 { line-height: 1.25; }
 
   navBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
   document.getElementById('tbLoginClose').addEventListener('click', closeModal);
+  document.getElementById('tbLoginHome').addEventListener('click', closeModal);
   modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
 
